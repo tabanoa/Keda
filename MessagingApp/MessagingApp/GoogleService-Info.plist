@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>851859739838-ppl8mgecp4b5dri4he82aarq1f6oovg5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.851859739838-ppl8mgecp4b5dri4he82aarq1f6oovg5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCVNyZJwSK_Qfi0sXb2QSChEwGqQzj6Br8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>851859739838</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.BenJenkyn.MessagingApp</string>
+	<key>PROJECT_ID</key>
+	<string>messageapp-b566d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>messageapp-b566d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:851859739838:ios:53055d45531c6ef4797aef</string>
+</dict>
+</plist>
