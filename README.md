@@ -1,2 +1,0 @@
-# Keda
-Keda Capstone Project 
