@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="EmailList" representedClassName="EmailList" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RecentlyViewed" representedClassName="RecentlyViewed" syncable="YES">
+        <attribute name="createdTime" optional="YES" attributeType="String"/>
+        <attribute name="productUID" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RecentSearches" representedClassName="RecentSearches" syncable="YES">
+        <attribute name="createdTime" optional="YES" attributeType="String"/>
+        <attribute name="tag" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="EmailList" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="RecentlyViewed" positionX="-63" positionY="0" width="128" height="73"/>
+        <element name="RecentSearches" positionX="-63" positionY="9" width="128" height="73"/>
+    </elements>
+</model>

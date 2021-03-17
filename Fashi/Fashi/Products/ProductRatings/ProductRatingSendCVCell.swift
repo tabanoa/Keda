@@ -1,0 +1,7 @@
+//
+//  ProductRatingSendCVCell.swift
+//  Keda
+//
+//  Created by Matthew Mukherjee on 03/03/2021.
+
+import Foundation
