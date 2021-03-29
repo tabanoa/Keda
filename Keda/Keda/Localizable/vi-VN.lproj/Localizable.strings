@@ -1,0 +1,1033 @@
+
+
+/************************ VIETNAMESE ************************/
+
+//MARK: - AppDelegate.swift
+/*******************************************************/
+
+/* AppDelegate.swift: English */
+"English" = "VietNam";
+
+//MARK: - NewUser.swift
+/*******************************************************/
+
+/* NewUser.swift: Screen1 T */
+"WELCOME TO FASHI" = "CHÀO MỪNG ĐẾN VỚI FASHI";
+
+/* NewUser.swift: Screen2 T */
+"QUICK SEARCH" = "TÌM KIẾM NHANH";
+
+/* NewUser.swift: Screen2 C */
+"Quickly find the products you like the most." = "Nhanh chóng tìm thấy những sản phẩm bạn thích nhất.";
+
+/* NewUser.swift: Screen3 T */
+"SHOPPING BAG" = "GIỎ HÀNG";
+
+/* NewUser.swift: Screen3 C */
+"Add products to your shopping cart, and check them out later." = "Thêm sản phẩm vào giỏ hàng của bạn và kiểm tra chúng sau.";
+
+/* NewUser.swift: Screen4 T */
+"WISHLIST" = "DANH SÁCH YÊU THÍCH";
+
+/* NewUser.swift: Screen4 C */
+"Build a wishlist with your favorite products to buy them later." = "Xây dựng một danh sách các sản phẩm yêu thích để mua chúng sau này.";
+
+/* NewUser.swift: Screen5 T */
+"ORDER TRACKING" = "THEO DÕI ĐƠN HÀNG";
+
+/* NewUser.swift: Screen5 C */
+"Monitor your orders and get updates when something changes." = "Theo dõi đơn đặt hàng của bạn và nhận được cập nhật khi có thay đổi.";
+
+/* NewUser.swift: Screen6 T */
+"NOTIFICATIONS" = "THÔNG BÁO";
+
+/* NewUser.swift: Screen6 C */
+"Get notifications for new products, promotions and discounts." = "Nhận thông báo cho các sản phẩm mới, chương trình khuyến mãi và giảm giá.";
+
+/* NewUser.swift: Screen7 T */
+"STRIPE PAYMENTS" = "THANH TOÁN VỚI STRIPE";
+
+/* NewUser.swift: Screen7 C */
+"We support all payment options." = "Chúng tôi hỗ trợ tất cả các tùy chọn thanh toán.";
+
+/* NewUser.swift: Screen8 T */
+"APPLE PAY" = "APPLE PAY";
+
+/* NewUser.swift: Screen8 C */
+"Pay with a single click with Apple Pay." = "Thanh toán chỉ bằng một cú nhấp chuột với Apple Pay.";
+
+//MARK: - NewUserOnboardingVC.swift
+/*******************************************************/
+
+/* NewUserOnboardingVC.swift: NEXT */
+"NEXT" = "TIẾP THEO";
+
+/* NewUserOnboardingVC.swift: Skip */
+"Skip" = "Bỏ Qua";
+
+/* NewUserOnboardingVC.swift: FINISH */
+"FINISH" = "HOÀN THÀNH";
+
+//MARK: - WelcomeVC.swift
+/*******************************************************/
+
+/* WelcomeVC.swift: Ignore */
+"Ignore" = "Bỏ Qua";
+
+/* SignInVC.swift: LOG IN
+   WelcomeVC.swift: LOG IN */
+"LOG IN" = "ĐĂNG NHẬP";
+
+/* WelcomeVC.swift: Title */
+"Shop and get updates on new products, promotions and sales with Fashi app." = "Mua sắm và nhận thông tin cập nhật về các sản phẩm mới, chương trình khuyến mãi và giảm giá với ứng dụng Fashi.";
+
+/* SignUpTVC.swift: SIGN UP
+   WelcomeVC.swift: SIGN UP */
+"SIGN UP" = "ĐĂNG KÝ";
+
+/* WelcomeVC.swift: Welcome To Fashi */
+"Welcome To Fashi" = "Chào Mừng Đến Với Fashi";
+
+//MARK: - SignInVC.swift
+/*******************************************************/
+
+/* SignInVC.swift: Cancel
+ ImagePickerHelper.swift: Cancel
+ Types.swift: Cancel
+ EditProfileVC.swift: Cancel
+ ChangePasswordTVC.swift: Cancel
+ ProductsListSearchVC.swift: Cancel
+ CategoriesSizesCVC.swift: Cancel
+ CategoriesColorSizeTVC.swift: Cancel
+ AddCardVC.swift: Cancel */
+"Cancel" = "Huỷ";
+
+/* SignInVC.swift: Check your email address */
+"Check your email address" = "Kiểm tra địa chỉ email của bạn";
+
+/* SignInVC.swift: Email address does not exist */
+"Email address does not exist" = "Địa chỉ email không tồn tại";
+
+/* SignInVC.swift: Email or password is incorrect */
+"Email or password is incorrect" = "Email hoặc mật khẩu không đúng";
+
+/* SignInVC.swift: Enter email address */
+"Enter email address" = "Nhập địa chỉ email";
+
+/* SignInVC.swift: FACEBOOK LOGIN */
+"FACEBOOK LOGIN" = "ĐĂNG NHẬP FACEBOOK";
+
+/* SignInVC.swift: Forget Password */
+"Forget Password?" = "Quên Mật Khẩu?";
+
+/* SignInVC.swift: OR */
+"OR" = "HOẶC";
+
+/* SignInVC.swift: Reset */
+"Reset" = "Đặt Lại";
+
+/* SignInVC.swift: Reset Your Password */
+"Reset Your Password" = "Đặt Lại Mật Khẩu Của Bạn";
+
+/* SignInVC.swift: Save password */
+"Save password" = "Lưu mật khẩu";
+
+/* SignInVC.swift: Success
+ ProductVC.swift: Success
+ OrderHistoryVC.swift: Orders
+ ProductsListVC.swift: Success
+ ReceiptVC.swift: Success
+ ShippingToVC.swift: Success */
+"Success" = "Thành Công";
+
+/* SignInVC.swift: Whoops
+ EditProfileVC.swift: Whoops!!!
+ ChangePasswordTVC.swift: Whoops!!!
+ ChangePasswordVC.swift: Whoops!!!
+ CheckoutVC.swift: Whoops!!!
+ AddCardVC.swift: Whoops!!! */
+"Whoops!!!" = "Rất Tiếc!!!";
+
+/* SignInVC.swift: LOGIN TO YOUR ACCOUNT */
+"LOGIN TO YOUR ACCOUNT" = "ĐĂNG NHẬP TÀI KHOẢN CỦA BẠN";
+
+//MARK: - SignUpVC.swift
+/*******************************************************/
+
+/* SignUpVC.swift: Terms of Use */
+"Terms of Use." = "Điều Khoản của chúng tôi.";
+
+/* "SignUpVC.swift: LeftTxt */
+"By creating an account you agree with our " = "Bằng cách tạo một tài khoản bạn đã đồng ý với ";
+
+/* SignUpVC.swift: CREATE NEW ACCOUNT */
+"CREATE NEW ACCOUNT" = "TẠO TÀI KHOẢN MỚI";
+
+
+//MARK: - SignUpTVC.swift
+/*******************************************************/
+
+/* SignUpTVC.swift: At least 1 lowercased */
+"At least 1 lowercased." = "Phải có 1 chữ viết thường.";
+
+/* SignUpTVC.swift: At least 1 number */
+"At least 1 number." = "Phải có 1 số.";
+
+/* SignUpTVC.swift: At least 1 special character */
+"At least 1 special character." = "Phải có 1 ký tự đặc biệt.";
+
+/* SignUpTVC.swift: At least 1 uppercase */
+"At least 1 uppercase." = "Phải có 1 chữ viết hoa.";
+
+/* SignUpTVC.swift: Full Name */
+"Full Name" = "Họ Tên";
+
+/* SignUpTVC.swift: Minimum 8 characters */
+"Minimum 8 characters." = "Nhỏ nhất 8 từ.";
+
+/* SignUpTVC.swift: Phone Number
+ EditProfileVC.swift: Phone Number
+ AddressVC.swift: Phone Number */
+"Phone Number" = "Số Điện Thoại";
+
+//MARK: - InternetView.swift
+/*******************************************************/
+
+/* InternetView.swift: Internet Not Available
+InternetAvailable.swift: Internet Not Available */
+"Internet Not Available" = "Không có kết nối Internet";
+
+//MARK: - EditColorHeaderView.swift
+/*******************************************************/
+
+/* EditColorHeaderView.swift: Select */
+"Select" = "Chọn";
+
+//MARK: - Profile.swift
+/*******************************************************/
+
+/* Profile.swift: Account Details */
+"Account Details" = "Chi Tiết";
+
+/* Profile.swift: Clear Search History */
+"Clear Search History" = "Xoá Lịch Sử Tìm Kiếm";
+
+/* Profile.swift: Clear Watch History */
+"Clear Watch History" = "Xoá Lịch Sử Xem";
+
+/* Profile.swift: Contact Us */
+"Contact Us" = "Liên Hệ";
+
+/* Profile.swift: Members */
+"Members" = "Thành Viên";
+
+/* Profile.swift: Notifications */
+"Notifications" = "Thông Báo";
+
+/* Profile.swift: Order History */
+"Order History" = "Lịch Sử";
+
+/* Profile.swift: Settings */
+"Settings" = "Cài Đặt";
+
+//MARK: - User.swift
+/*******************************************************/
+
+/* User.swift Online */
+"Online" = "Đang truy cập";
+
+//MARK: - UISearchBar+Ext.swift
+/*******************************************************/
+
+/* UISearchBar+Ext.swift: Search */
+"Search" = "Tìm kiếm";
+
+//MARK: - Types.swift
+/*******************************************************/
+
+/* Types.swift: days ago */
+" days ago" = " ngày trước";
+
+/* Types.swift: hours ago */
+" hours ago" = " giờ trước";
+
+/* Types.swift: minutes ago */
+" minutes ago" = " phút trước";
+
+/* Types.swift: seconds ago */
+" seconds ago" = " giây trước";
+
+/* Types.swift: Accessories */
+"Accessories" = "Phụ Kiện";
+
+/* Types.swift: Title */
+"Are you sure want to exit?" = "Bạn muốn thoát?";
+
+/* Types.swift: Bags */
+"Bags" = "Túi";
+
+/* Types.swift: Clothing */
+"Clothing" = "Quần Áo";
+
+/* Types.swift: Dresses */
+"Dresses" = "Váy Đầm";
+
+/* Types.swift: Kids */
+"Kids" = "Trẻ Em";
+
+/* Types.swift: Lingerie */
+"Lingerie" = "Đồ Lót";
+
+/* Types.swift: Men */
+"Men" = "Đàn Ông";
+
+/* Types.swift: No */
+"No" = "Không";
+
+/* Types.swift: Online just now */
+"Online just now" = "Vừa mới truy cập";
+
+/* Types.swift: Require A Supported */
+"Require A Supported!" = "Yêu Cầu Hỗ Trợ!";
+
+/* Types.swift: Shoes */
+"Shoes" = "Giày";
+
+/* Types.swift: Skirts */
+"Skirts" = "Chân Váy";
+
+/* Types.swift: Sleepwear */
+"Sleepwear" = "Đồ Ngủ";
+
+/* Types.swift: Swimwear */
+"Swimwear" = "Đồ Bơi";
+
+/* Types.swift: Watches */
+"Watches" = "Đồng Hồ";
+
+/* Types.swift: Yes */
+"Yes" = "Có";
+
+//MARK: - FilterVC.swift
+/*******************************************************/
+
+/* FilterVC.swift: Color */
+"Color" = "Theo Màu";
+
+/* FilterVC.swift: Rating */
+"Rating" = "Theo Lượt Đánh Giá";
+
+//MARK: - FilterContainerView.swift
+/*******************************************************/
+
+/* FilterContainerView.swift: Done
+ EditProfileVC.swift: Done
+ CategoriesColorSizeTVC.swift: Done */
+"Done" = "Xong";
+
+/* FilterContainerView.swift: Filter */
+"Filter" = "Lọc Sản Phẩm";
+
+/* FilterContainerView.swift: Clear All */
+"Clear All" = "";
+
+//MARK: - FilteredVC.swift
+/*******************************************************/
+
+/* FilteredVC.swift: Filered */
+"Filered" = "Đã Lọc";
+
+/* FilteredVC.swift: Product does not exist */
+"Product does not exist" = "Sản phẩm không tồn tại";
+
+//MARK: - SearchContainerView.swift
+/*******************************************************/
+
+/* SearchContainerView.swift: Search Suggestions */
+"Search Suggestions" = "Gợi Ý";
+
+/* SearchContainerView.swift: Recent Searches */
+"Recent Searches" = "Tìm Kiếm Gần Đây";
+
+/* SearchContainerView.swift: Recently Viewed */
+"Recently Viewed" = "Đã Xem Gần Đây";
+
+/* SearchContainerView.swift: View All */
+"View All" = "Xem Tất Cả";
+
+//MARK: - ProductVC.swift
+/*******************************************************/
+
+/* ProductVC.swift: Delivery Options */
+"Delivery Options" = "Lựa Chọn Giao Hàng";
+
+/* ProductVC.swift: Description
+ CategoriesInfoTVC.swift: Description */
+"Description" = "Mô Tả";
+
+/* ProductVC.swift: Description & Delivery */
+"Description & Delivery" = "Mô tả & Giao Hàng";
+
+/* ProductVC.swift: Select Colos */
+"Select Colos" = "Chọn Màu Sắc";
+
+/* ProductVC.swift: Select Colos And Sizes */
+"Select Colos And Sizes" = "Chọn Màu Sắc Và Kích Thước";
+
+/* ProductVC.swift: Select Sizes
+ CategoriesSizesCVC.swift: Select Sizes */
+"Select Sizes" = "Chọn Kích Thước";
+
+/* ProductVC.swift: Share */
+"Share" = "Chia Sẻ Ngay !!!";
+
+//MARK: - ProductColorView.swift
+/*******************************************************/
+
+/* ProductColorView.swift: Colors */
+"Colors" = "Màu Sắc";
+
+//MARK: - ProductSizeView.swift
+/*******************************************************/
+
+/* ProductSizeView.swift: Sizes
+ CategoriesSizesCVC.swift: Sizes */
+"Sizes" = "Kích Thước";
+
+//MARK: - ProductContentView.swift
+/*******************************************************/
+
+/* ProductContentView.swift: View All */
+"View All" = "Xem Tất Cả";
+
+//MARK: - ProductDescriptionView.swift
+/*******************************************************/
+
+/* ProductDescriptionView.swift: Show More */
+"Show More" = "Xem Thêm";
+
+//MARK: - ProductBottomView.swift
+/*******************************************************/
+
+/* ProductBottomView.swift: BUY */
+"BUY" = "MUA";
+
+/* ProductBottomView.swift: ADD TO BAG */
+"ADD TO BAG" = "THÊM VÀO GIỎ";
+
+//MARK: - DescriptionDeliveryVC.swift
+/*******************************************************/
+
+/* DescriptionDeliveryVC.swift: Standard Saver
+ ReceiptVC.swift: Standard Saver */
+"Standard Saver" = "Gửi hàng bình thường";
+
+//MARK: - ProductRatingVC.swift
+/*******************************************************/
+
+/* ProductRatingVC.swift: Product Ratings */
+"Product Ratings" = "Xếp Hạng Sản Phẩm";
+
+/* ProductRatingVC.swift: Ratings */
+"Ratings" = "Lượt Xếp Hạng";
+
+/* ProductRatingVC.swift: Thanks for your feedback */
+"Thanks for your feedback" = "Cảm ơn phản hồi của bạn";
+
+//MARK: - ProductRatingBottomView.swift
+/*******************************************************/
+
+/* ProductRatingBottomView.swift: Bình luận */
+"Enter comment" = "Bình luận";
+
+//MARK: - QuantityIMGViewVC.swift
+/*******************************************************/
+
+/* QuantityIMGViewVC.swift: Photos From Client */
+"Photos From Client" = "Ảnh Từ Khách Hàng";
+
+//MARK: - ImagePickerHelper.swift
+/*******************************************************/
+
+/* ImagePickerHelper.swift: Photo From Library */
+"Photo From Library" = "Ảnh Từ Thư Viện";
+
+/* ImagePickerHelper.swift: Take Photo */
+"Take Photo" = "Chụp Ảnh";
+
+//MARK: - MoreVC.swift
+/*******************************************************/
+
+/* MoreVC.swift: Clear search history? */
+"Clear search history?" = "Xoá lịch sử tìm kiếm?";
+
+/* MoreVC.swift: Profile */
+"Profile" = "Thông Tin";
+
+/* MoreVC.swift: Clear watch history? */
+"Clear watch history?" = "Xoá lịch sử xem?";
+
+//MARK: - LogoutTVCell.swift
+/*******************************************************/
+
+/* LogoutTVCell.swift: Logout */
+"Logout" = "Đăng Xuất";
+
+//MARK: - EditProfileVC.swift
+/*******************************************************/
+
+/* EditProfileVC.swift: E-mail Address */
+"E-mail Address" = "Địa Chỉ E-mail";
+
+/* EditProfileVC.swift: Edit Profile */
+"Edit Profile" = "Chỉnh Sửa";
+
+/* EditProfileVC.swift: Email address is not invalid */
+"Email address is not invalid" = "Địa chỉ email không hợp lệ";
+
+/* EditProfileVC.swift: First Name
+ AddressVC.swift: First Name */
+"First Name" = "Tên";
+
+/* EditProfileVC.swift: Last Name
+ AddressVC.swift: Last Name */
+"Last Name" = "Họ";
+
+/* EditProfileVC.swift: PRIVATE DETAILS */
+"PRIVATE DETAILS" = "RIÊNG TƯ";
+
+/* EditProfileVC.swift: PUBLIC PROFILE */
+"PUBLIC PROFILE" = "CÔNG KHAI";
+
+/* EditProfileVC.swift: Verified */
+"Verified" = "Đã kích hoạt";
+
+/* EditProfileVC.swift: Verify */
+"Verify" = "Kích hoạt";
+
+//MARK: - MembersVC.swift
+/*******************************************************/
+
+/* MembersVC.swift: Members */
+"Members" = "Thành Viên";
+
+/* MembersVC.swift: MEMBERS */
+"MEMBERS" = "THÀNH VIÊN";
+
+/* MembersVC.swift: ORDER PLACED */
+"ORDER PLACED" = "ĐƠN HÀNG";
+
+//MARK: - MemberDetailsVC.swift
+/*******************************************************/
+
+/* MemberDetailsVC.swift: Details */
+"Details" = "Chi Tiết";
+
+/* MemberDetailsVC.swift: Full Name:  */
+"Full Name: " = "Họ Tên: ";
+
+/* MemberDetailsVC.swift: Phone Number:  */
+"Phone Number: " = "Số ĐT: ";
+
+//MARK: - MemberDetailsHV.swift
+/*******************************************************/
+
+/* MemberDetailsHV.swift: Bought */
+"Bought" = "Đã Mua";
+
+//MARK: - OrderHistoryVC.swift
+/*******************************************************/
+
+/* OrderHistoryVC.swift: Orders
+ ReceiptVC.swift: Orders */
+"Orders" = "Lịch Sử Đơn Hàng";
+
+/* OrderHistoryVC.swift: No data */
+"No data" = "Không có dữ liệu";
+
+//MARK: - OrderHistoryTVCell.swift
+/*******************************************************/
+
+/* OrderHistoryTVCell.swift: Delivered
+ ReceiptVC.swift: Delivered */
+"Delivered" = "Đã Giao Hàng";
+
+/* OrderHistoryTVCell.swift: Order Placed
+ ReceiptVC.swift: Order Placed */
+"Order Placed" = "Đã Đặt Hàng";
+
+/* OrderHistoryTVCell.swift: Ordered On  */
+"Ordered On " = "Đơn Hàng Ngày ";
+
+/* OrderHistoryTVCell.swift: REORDER */
+"REORDER" = "ĐẶT LẠI";
+
+/* OrderHistoryTVCell.swift: Total:  */
+"Total: " = "TC: ";
+
+//MARK: - SettingsVC.swift
+/*******************************************************/
+
+/* SettingsVC.swift: ACCOUNT */
+"ACCOUNT" = "TÀI KHOẢN";
+
+/* ChangePasswordVC.swift: Change Password
+   SettingsVC.swift: Change Password */
+"Change Password" = "Đổi Mật Khẩu";
+
+/* SettingsVC.swift: Log Out */
+"Log Out" = "Đăng Xuất";
+
+/* SettingsVC.swift: New Arrivals */
+"New Arrivals" = "Hàng Mới Về";
+
+/* SettingsVC.swift: Order Updates */
+"Order Updates" = "Cập Nhập Đơn Hàng";
+
+/* SettingsVC.swift: Promotions */
+"Promotions" = "Khuyến Mãi";
+
+/* SettingsVC.swift: PUSH NOTIFICATIONS */
+"PUSH NOTIFICATIONS" = "THÔNG BÁO";
+
+/* SettingsVC.swift: Sales Alerts */
+"Sales Alerts" = "Giảm Giá";
+
+/* SettingsVC.swift: SECURITY */
+"SECURITY" = "BẢO MẬT";
+
+/* SettingsVC.swift: Support */
+"Support" = "Hỗ Trợ";
+
+//MARK: - ChangePasswordVC.swift
+/*******************************************************/
+
+/* ChangePasswordVC.swift: Current password is incorrect */
+"Current password is incorrect" = "Mật khẩu hiện tại không đúng";
+
+//MARK: - ChangePasswordTVC.swift
+/*******************************************************/
+
+/* ChangePasswordTVC.swift: Current Password */
+"Current password" = "Mật khẩu hiện tại";
+
+/* ChangePasswordTVC.swift: Missing data
+ CategoriesInfoTVC.swift: Missing data */
+"Missing data" = "Dữ liệu bị thiếu";
+
+/* ChangePasswordTVC.swift: New Password */
+"New password" = "Mật khẩu mới";
+
+/* ChangePasswordTVC.swift: New password and confirmation password are not the same */
+"New password and confirmation password are not the same" = "Mật khẩu mới và mật khẩu xác nhận không giống nhau";
+
+/* ChangePasswordTVC.swift: Save Changes */
+"Save Changes" = "Lưu Thay Đổi";
+
+/* ChangePasswordTVC.swift: Verify Password */
+"Verify password" = "Xác nhận mật khẩu";
+
+//MARK: - ContactUsVC.swift
+/*******************************************************/
+
+/* ContactUsVC.swift: Call Us */
+"Call Us" = "Gọi Cho Tôi";
+
+/* ContactUsVC.swift: Contact */
+"Contact" = "Liên Hệ";
+
+/* ContactUsVC.swift: CONTACT */
+"CONTACT" = "LIÊN HỆ";
+
+/* ContactUsVC.swift: E-Mail Us */
+"E-Mail Us" = "Liên Hệ Bằng Email";
+
+/* ContactUsVC.swift: Our Address */
+"Our Address" = "Địa Chỉ Của Chúng Tôi";
+
+/* ContactUsVC.swift: Our business hours are Mon - Fri, 8am - 5pm. */
+"Our business hours are Mon - Fri, 8am - 5pm." = "Giờ làm việc của chúng tôi từ T2 - T6, 8h sáng - 5h chiều.";
+
+//MARK: - NotificationVC.swift
+/*******************************************************/
+
+/* NotificationVC.swift: Notifications */
+"Notifications" = "Thông Báo";
+
+//MARK: - NotificationTVCell.swift
+/*******************************************************/
+
+/* NotificationTVCell.swift: Just now */
+"Just now" = "Vừa mới";
+
+//MARK: - ProductsListVC.swift
+/*******************************************************/
+
+/* ProductsListVC.swift: ACTIVE */
+"ACTIVE" = "HOẠT ĐỘNG";
+
+/* ProductsListVC.swift: New Arrival -  */
+"New Arrival - " = "Hàng Mới Về - ";
+
+/* ProductsListTVCell.swift: NOT ACTIVE
+   ProductsListVC.swift: NOT ACTIVE */
+"NOT ACTIVE" = "CHƯA HOẠT ĐỘNG";
+
+//MARK: - ProductsListDetailVC.swift
+/*******************************************************/
+
+/* ProductsListDetailVC.swift: Delete */
+"Delete" = "Xoá";
+
+/* ProductsListDetailVC.swift: Are you sure want to delete?
+ CategoriesInfoTVC.swift: Are you sure want to delete? */
+"Are you sure want to delete?" = "Bạn muốn xoá?";
+
+//MARK: - CategoriesTVC.swift
+/*******************************************************/
+
+/* CategoriesTVC.swift: Categories */
+"Categories" = "Danh Mục";
+
+//MARK: - CategoriesColorsCVC.swift
+/*******************************************************/
+
+/* CategoriesColorsCVC.swift: Next
+ CategoriesSizesCVC.swift: Next */
+"Next" = "Tiếp";
+
+/* CategoriesColorsCVC.swift: Colors */
+"Colors" = "Màu Sắc";
+
+/* CategoriesColorsCVC.swift: Select Colos */
+"Select Colos" = "Chọn Màu Sắc";
+
+//MARK: - CategoriesSizesCVC.swift
+/*******************************************************/
+
+/* CategoriesSizesCVC.swift: Add Size */
+"Add Size" = "Thêm Kích Thước";
+
+/* CategoriesSizesCVC.swift: Save
+ CategoriesInfoTVC.swift: Save
+ CategoriesInfoTVC.swift: Save
+ TextVC.swift
+ TagVC.swift */
+"Save" = "Lưu";
+
+//MARK: - CategoriesInfoTVC.swift
+/*******************************************************/
+
+/* CategoriesInfoTVC.swift: ADD IMAGES */
+"ADD IMAGES" = "THÊM HÌNH ẢNH";
+
+/* CategoriesInfoTVC.swift: Copy */
+"Copy" = "Sao Chép";
+
+/* CategoriesInfoTVC.swift: DESCRIPTION */
+"DESCRIPTION" = "MÔ TẢ";
+
+/* CategoriesInfoTVC.swift: IMAGE */
+"IMAGE" = "HÌNH ẢNH";
+
+/* CategoriesInfoTVC.swift: Name */
+"Name" = "Tên";
+
+/* CategoriesInfoTVC.swift: NAME */
+"NAME" = "TÊN";
+
+/* CategoriesInfoTVC.swift: PRICE */
+"PRICE" = "GIÁ";
+
+/* CategoriesInfoTVC.swift: SALEOFF */
+"SALEOFF" = "GIẢM GIÁ";
+
+/* CategoriesInfoTVC.swift: SaleOFF  */
+"SALEOFF " = "GIẢM GIÁ ";
+
+/* CategoriesInfoTVC.swift: TAG */
+"TAG" = "THẺ";
+
+//MARK: - TextVC.swift
+/*******************************************************/
+
+/* TextVC.swift: Add Text */
+"Add Text" = "Thêm Văn Bản";
+
+//MARK: - CategoriesDelTVCell.swift
+/*******************************************************/
+
+/* CategoriesDelTVCell.swift: Add Text
+ CartItemTVCell.swift: DELETE */
+"DELETE" = "XOÁ";
+
+//MARK: - CategoriesAddImageCVCell.swift
+/*******************************************************/
+
+/* CategoriesAddImageCVCell.swift: AddImage */
+"AddImage" = "Thêm Hình Ảnh";
+
+//MARK: - TagVC.swift
+/*******************************************************/
+
+/* TagVC.swift: Add tags */
+"Add tags" = "Thêm thẻ";
+
+/* TagVC.swift: Tags */
+"Tags" = "Thẻ";
+
+//MARK: - CategoriesPriceTVCell.swift
+/*******************************************************/
+
+/* CategoriesPriceTVCell.swift: Enter Price */
+"Enter Price" = "Nhập Giá";
+
+//MARK: - CategoriesSaleOffTVCell.swift
+/*******************************************************/
+
+/* CategoriesSaleOffTVCell.swift: Enter SaleOFF */
+"Enter SaleOFF" = "Giảm Giá?";
+
+//MARK: - CartVC.swift
+/*******************************************************/
+
+/* CartVC.swift: Add New Address
+ ShippingToVC.swift: Add New Address */
+"Add New Address" = "Thêm Địa Chỉ Mới";
+
+/* CartVC.swift: ITEMS IN CART */
+"ITEMS IN CART" = "MẶT HÀNG";
+
+/* CartVC.swift: New address has been added
+ ShippingToVC.swift: New address has been added */
+"New address has been added" = "Đã Thêm Địa Chỉ Mới";
+
+/* CartVC.swift: ORDER SUMMARY */
+"ORDER SUMMARY" = "CỘNG";
+
+/* CartVC.swift: Remove Item */
+"Remove Item" = "Xoá Sản Phẩm";
+
+/* CartVC.swift: Remove this item from cart? */
+"Remove this item from cart?" = "Xoá sản phẩm từ giỏ hàng?";
+
+/* CartVC.swift: Select Quantity */
+"Select Quantity" = "Chọn Số Lượng";
+
+/* CartVC.swift: SHIPPING AND PAYMENT */
+"SHIPPING AND PAYMENT" = "PHÍ VÀ THANH TOÁN";
+
+/* CartVC.swift: Shopping Cart */
+"Shopping Cart" = "Giỏ Hàng";
+
+//MARK: - CartShipToTVCell.swift
+/*******************************************************/
+
+/* CartShipToTVCell.swift: Ship to */
+"Ship to" = "Gửi đến";
+
+//MARK: - CartItemTVCell.swift
+/*******************************************************/
+
+/* CartItemTVCell.swift: Color: */
+"Color:" = "Màu sắc:";
+
+/* CartItemTVCell.swift: Size:
+ ItemTVCell.swift: Size: */
+"Size:" = "Kích thước:";
+
+/* CartItemTVCell.swift: Quantity:
+ ItemTVCell.swift: Quantity: */
+"Quantity:" = "Số lượng:";
+
+//MARK: - CartSubtotalTVCell.swift
+/*******************************************************/
+
+/* CartSubtotalTVCell.swift: SHIPPING FEE
+ SubtotalTVCell.swift: SHIPPING FEE */
+"SHIPPING FEE" = "PHÍ VẬN CHUYỂN";
+
+/* CartSubtotalTVCell.swift: SUBTOTAL
+ SubtotalTVCell.swift: SUBTOTAL */
+"SUBTOTAL" = "CỘNG";
+
+/* CartSubtotalTVCell.swift: TAX
+ SubtotalTVCell.swift: TAX */
+"TAX" = "THUẾ";
+
+//MARK: - CartTotalTVCell.swift
+/*******************************************************/
+
+/* CartTotalTVCell.swift: TOTAL
+ TotalTVCell.swift: TOTAL */
+"TOTAL" = "TỔNG CỘNG";
+
+//MARK: - CartCheckoutTVCell.swift
+/*******************************************************/
+
+/* CartCheckoutTVCell.swift: CHECKOUT
+ CheckoutTopView.swift: CHECK OUT */
+"CHECK OUT" = "THANH TOÁN";
+
+//MARK: - CheckoutVC.swift
+/*******************************************************/
+
+/* CheckoutVC.swift: Continue */
+"Continue" = "Tiếp Tục";
+
+/* CheckoutVC.swift: Device does not support Apple Pay */
+"Device does not support Apple Pay" = "Thiết bị của bạn không hỗ trợ Apple Pay";
+
+/* CheckoutBottomView.swift: Select Payment Method
+   CheckoutVC.swift: Select Payment Method */
+"Select Payment Method" = "Chọn Phương Thức Thanh Toán";
+
+/* CheckoutVC.swift: There is a problem with your Apple Pay configuration */
+"There is a problem with your Apple Pay configuration" = "Cấu hình Apple Pay của bạn";
+
+//MARK: - AddCardVC.swift
+/*******************************************************/
+
+/* AddCardVC.swift: Add A Card */
+"Add A Card" = "Thêm Thẻ";
+
+/* AddCardVC.swift: Try Again */
+"Try Again" = "Thử Lại";
+
+//MARK: - VisaTotalTVCell.swift
+/*******************************************************/
+
+/* VisaTotalTVCell.swift: Total */
+"Total" = "Tổng Cộng";
+
+//MARK: - PayPalCVCell.swift
+/*******************************************************/
+
+/* PayPalCVCell.swift: Pay using PayPal's worldwide secure system. */
+"Pay using PayPal's worldwide secure system." = "Thanh toán bằng hệ thống bảo mật toàn cầu của PayPal.";
+
+//MARK: - ReceiptVC.swift
+/*******************************************************/
+
+/* ReceiptVC.swift: Cash payment on delivery */
+"Cash payment on delivery" = "Thanh toán tiền mặt khi giao hàng";
+
+/* ReceiptVC.swift: Code order:  */
+"Code order: " = "Mã đơn hàng: ";
+
+/* ReceiptVC.swift: Date order:  */
+"Date order: " = "Ngày đặt hàng: ";
+
+/* ReceiptVC.swift: Forms of delivery */
+"Forms of delivery" = "Hình thức giao hàng";
+
+/* ReceiptVC.swift: Paid by  */
+"Paid by " = "Đã thanh toán bằng ";
+
+/* ReceiptVC.swift: Payment method */
+"Payment method" = "Phương thức thanh toán";
+
+/* ReceiptVC.swift: Receiver's address */
+"Receiver's address" = "Địa chỉ người nhận";
+
+/* ReceiptVC.swift: State:  */
+"State: " = "Trạng thái: ";
+
+/* ReceiptVC.swift: Updating Orders -  */
+"Updating Orders - " = "Cập Nhật Đơn Hàng - ";
+
+//MARK: - AddressVC.swift
+/*******************************************************/
+
+/* AddressVC.swift: Address Line 1 */
+"Address Line 1" = "Địa Chỉ Dòng 1";
+
+/* AddressVC.swift: Address Line 2 */
+"Address Line 2" = "Địa Chỉ Dòng 2";
+
+/* AddressVC.swift: City */
+"City" = "Thành Phố";
+
+/* AddressVC.swift: Country/Region */
+"Country/Region" = "Đất Nước/Khu vực";
+
+/* AddressVC.swift: Optional */
+"Optional" = "Tuỳ Chọn";
+
+/* AddressVC.swift: Select City */
+"Select City" = "Chọn Thành Phố";
+
+/* AddressVC.swift: Select Country */
+"Select Country" = "Chọn Đất Nước";
+
+/* AddressVC.swift: Select State */
+"Select State" = "Chọn Tỉnh Thành";
+
+/* AddressVC.swift: State */
+"State" = "Tiểu Bang";
+
+//MARK: - ShippingToVC.swift
+/*******************************************************/
+
+/* ShippingToVC.swift: Address Book */
+"Address Book" = "Danh Sách Địa Chỉ";
+
+/* ShippingToVC.swift: ADDRESSES ON FILE */
+"ADDRESSES ON FILE" = "ĐỊA CHỈ TRONG HỒ SƠ";
+
+/* ShippingToVC.swift: Edit Address */
+"Edit Address" = "Sửa Địa Chỉ";
+
+/* ShippingToVC.swift: Has Updated */
+"Has Updated" = "Đã Cập Nhập";
+
+/* ShippingToVC.swift: Update */
+"Update" = "Cập Nhập";
+
+/* ShippingToVC.swift: ＋  Add New Address */
+"＋  Add New Address" = "＋    Thêm Địa Chỉ Mới";
+
+//MARK: - ShippingBottomView.swift
+/*******************************************************/
+
+/* ShippingBottomView.swift: Use This Address */
+"Use This Address" = "Sử Dụng Địa Chỉ Này";
+
+//MARK: - ShippingToTVCell.swift
+/*******************************************************/
+
+/* ShippingToTVCell.swift: Edit */
+"Edit" = "Sửa";
+
+//MARK: - WishlistVC.swift
+/*******************************************************/
+
+/* WishlistVC.swift: My Wishlist */
+"My Wishlist" = "Yêu Thích";
+
+/* WishlistVC.swift: Remove Item */
+"Remove Item" = "Xoá Sản Phẩm";
+
+/* WishlistVC.swift: Remove this item from wishlist? */
+"Remove this item from wishlist?" = "Xoá sản phẩm từ mục yêu thích?";
+
+//MARK: - HomeContainerView.swift
+/*******************************************************/
+
+/* HomeContainerView.swift: Show More */
+"Show More" = "Xem Thêm";
+
+/* HomeContainerView.swift: New Arrivals */
+"New Arrivals" = "Hàng Mới Về";
+
+/* HomeContainerView.swift: Featured */
+"Featured" = "Nổi Bật";
+
+/* HomeContainerView.swift: Best Seller */
+"Best Seller" = "Bán Chạy Nhất";
+
+//MARK: - CategoriesDetailHV.swift
+/*******************************************************/
+
+/* CategoriesDetailHV.swift: COLLECTION 2020 */
+"COLLECTION 2020" = "BỘ SƯU TẬP 2020";

@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "Screen_Shot_2021-03-19_at_12.33.50_PM-removebg-preview.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
