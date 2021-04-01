@@ -42,6 +42,7 @@ class TabBarController: UITabBarController {
             self.updateUI(self.isAdmin)
             self.setupMiddleBtn()
         }
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -78,11 +78,11 @@ class MessagesController: UITableViewController, UIGestureRecognizerDelegate {
         
 //        Database.database().reference().child("users").child(toId).observeSingleEvent(of: .value, with: { (snapshot) in
 //            if let dictionary = snapshot.value as? [String : AnyObject] {
-//                let user = User.fetchCurrentUser { (User) in
-//                    User.uid = toId
-//                    User.fullName = dictionary["name"] as? String
-//                    User.email = dictionary["email"] as? String
-//                    User.avatarLink = dictionary["avatar"] as? String
+//                let user = User.fetchCurrentUser { (user) in
+//                    user.uid = toId
+//                    user.fullName = dictionary["name"] as? String
+//                    user.email = dictionary["email"] as? String
+//                    user.avatarLink = dictionary["avatar"] as? String
 //                    self.showChatController(user: User)
 //                }
 //

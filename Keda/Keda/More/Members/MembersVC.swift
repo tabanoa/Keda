@@ -155,6 +155,7 @@ extension MembersVC {
             self.tableView.reloadData()
         }
     }
+
     
     @objc func handleObserve() {
         tableView.isHidden = true

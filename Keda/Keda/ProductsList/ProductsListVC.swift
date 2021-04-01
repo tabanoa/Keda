@@ -350,10 +350,10 @@ extension ProductsListVC: ProductsListDetailVCDelegate {
             prsActive.remove(at: index)
             tableView.reloadData()
         }
-        */
+ */
+        
     }
 }
-
 //MARK: - UISearchBarDelegate
 
 extension ProductsListVC: UISearchBarDelegate {

@@ -117,9 +117,13 @@ extension Product {
                 let refSize = refPrID.child("colors/\(color)/sizes/\(size)")
                 refSize.updateChildValues(infoDict)
                 
-                uploadImageToImgur(pr.images) { (links) in
-                    ProductSize.saveImageLinks(prUID: pr.uid, color: color, size: size, imgLinks: links) {
-                        delay(duration: 5.0) { completion() }
+                if(pr.images.count == 0){
+                    completion()
+                }else{
+                    uploadImageToImgur(pr.images) { (links) in
+                        ProductSize.saveImageLinks(prUID: pr.uid, color: color, size: size, imgLinks: links) {
+                            delay(duration: 5.0) { completion() }
+                        }
                     }
                 }
             }

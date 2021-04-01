@@ -133,7 +133,7 @@ extension CategoriesColorsCVC {
     @objc func nextDidTap(_ sender: UIButton) {
         touchAnim(sender) {
             guard self.selectedColors.count != 0 else {
-                let txt = NSLocalizedString("Select Colos", comment: "CategoriesColorsCVC.swift: Select Colos")
+                let txt = NSLocalizedString("Select Color", comment: "CategoriesColorsCVC.swift: Select Color")
                 handleInternet(txt, imgName: "icon-error")
                 return
             }

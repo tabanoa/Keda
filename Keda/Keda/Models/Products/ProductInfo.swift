@@ -32,7 +32,7 @@ extension ProductInfoModel {
         let name = dictionary["name"] as! String
         let price = dictionary["price"] as! Double
         let saleOff = dictionary["saleOff"] as! Double
-        let imageLinks = dictionary["imageLinks"] as! [String]
+        let imageLinks = (dictionary["imageLinks"] as? [String]) ?? []
         let description = dictionary["description"] as! String
         self.init(name: name, price: price, saleOff: saleOff, imageLinks: imageLinks, description: description)
     }
