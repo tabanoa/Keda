@@ -78,7 +78,7 @@ extension MemberDetailsHV {
         wishlistView.translatesAutoresizingMaskIntoConstraints = false
         
         //TODO: - FlowLbl
-        let boughtTxt = NSLocalizedString("Bought", comment: "MemberDetailsHV.swift: Bought")
+        let boughtTxt = NSLocalizedString("Items Rented", comment: "MemberDetailsHV.swift: Items Rented")
         
         let wishlistTxt = "Wishlist"
         boughtLbl.configureNameForCell(false, txtColor: .black, fontSize: 23.0, isTxt: "0", fontN: fontNamedBold)

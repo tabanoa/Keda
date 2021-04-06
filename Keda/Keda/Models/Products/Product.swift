@@ -9,18 +9,18 @@ import Firebase
 import SDWebImage
 
 enum Categories: String {
-    case Hoodies = "Hoodies"
-    case Belts = "Belts"
-    case Shoes = "Shoes"
-    case Watches = "Watches"
-    case Bags = "Bags"
-    case Jackets = "Jackets"
-    case Shirts = "Shirts"
-    case Shorts = "Shorts"
-    case Pants = "Pants"
-    case Slides = "Slides"
-    case Lounge = "Lounge"
-    case Collectables = "Collectables"
+    case Hoodies = "hoodies"
+    case Belts = "belts"
+    case Shoes = "shoes"
+    case Watches = "watches"
+    case Bags = "bags"
+    case Jackets = "jackets"
+    case Shirts = "shirts"
+    case Shorts = "shorts"
+    case Pants = "pants"
+    case Slides = "slides"
+    case Lounge = "lounge"
+    case Collectables = "collectables"
 }
 
 //MARK: - ProductModel
@@ -61,9 +61,6 @@ class Product: Hashable {
     }
     
     var prSizes: [ProductSize] {
-        if(proModel.prColors.count < colorModelIndex || proModel.prColors.count == 0){
-            return []
-        }
         return proModel.prColors[colorModelIndex].prSizes
     }
     
@@ -73,41 +70,16 @@ class Product: Hashable {
         return sizes
     }
     
-    var name: String {if(prSizes.count < sizeModelIndex || prSizes.count == 0){
-        return ""
-    }
-    return prSizes[sizeModelIndex].prInfoModel.name }
-    
-    var price: Double { if(prSizes.count < sizeModelIndex || prSizes.count == 0){
-        return 0.0
-    }
-    return prSizes[sizeModelIndex].prInfoModel.price }
-    
-    var saleOff: Double {if(prSizes.count < sizeModelIndex || prSizes.count == 0){
-        return 0.0
-    }
-    return prSizes[sizeModelIndex].prInfoModel.saleOff }
-    
-    var description: String {if(prSizes.count < sizeModelIndex || prSizes.count == 0){
-        return ""
-    }
-    return prSizes[sizeModelIndex].prInfoModel.description }
-    
-    var imageLinks: [String] {
-        if(prSizes.count < sizeModelIndex || prSizes.count == 0){
-            return []
-        }
-        return prSizes[sizeModelIndex].prInfoModel.imageLinks }
-        
-    var imageLink: String { return imageLinks.first ?? "https://i.imgur.com/YNoZzmJ.png"}
+    var name: String { return prSizes[sizeModelIndex].prInfoModel.name }
+    var price: Double { return prSizes[sizeModelIndex].prInfoModel.price }
+    var saleOff: Double { return prSizes[sizeModelIndex].prInfoModel.saleOff }
+    var description: String { return prSizes[sizeModelIndex].prInfoModel.description }
+    var imageLinks: [String] { return prSizes[sizeModelIndex].prInfoModel.imageLinks }
+    var imageLink: String { return imageLinks.first! }
     var viewed: Int { return proModel.viewed }
     var buyed: Int { return proModel.buyed }
     var active: Bool { return proModel.active }
-    var images: [UIImage] {
-        if(prSizes.count < sizeModelIndex || prSizes.count == 0){
-            return []
-        }
-        return prSizes[sizeModelIndex].prInfoModel.images }
+    var images: [UIImage] { return prSizes[sizeModelIndex].prInfoModel.images }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(uid)
@@ -153,7 +125,7 @@ extension Product {
             let uid = dictPr["uid"] as! String
             let createdTime = dictPr["createdTime"] as! String
             let type = dictPr["type"] as! String
-            let tags = (dictPr["tags"] as? [String]) ?? []
+            let tags = dictPr["tags"] as! [String]
             let active = dictPr["active"] as! Bool
             
             var prColors: [ProductColor] = []
@@ -206,7 +178,7 @@ extension Product {
             let uid = dictPr["uid"] as! String
             let createdTime = dictPr["createdTime"] as! String
             let type = dictPr["type"] as! String
-            let tags = (dictPr["tags"] as? [String]) ?? []
+            let tags = dictPr["tags"] as! [String]
             let active = dictPr["active"] as! Bool
             
             var prColors: [ProductColor] = []
@@ -381,7 +353,7 @@ extension Product {
             let uid = dictPr["uid"] as! String
             let createdTime = dictPr["createdTime"] as! String
             let type = dictPr["type"] as! String
-            let tags = (dictPr["tags"] as? [String]) ?? []
+            let tags = dictPr["tags"] as! [String]
             let active = dictPr["active"] as! Bool
             
             var prColors: [ProductColor] = []
@@ -450,7 +422,7 @@ extension Product {
             let uid = dictPr["uid"] as! String
             let createdTime = dictPr["createdTime"] as! String
             let type = dictPr["type"] as! String
-            let tags = (dictPr["tags"] as? [String]) ?? []
+            let tags = dictPr["tags"] as! [String]
             let active = dictPr["active"] as! Bool
             
             var prColors: [ProductColor] = []

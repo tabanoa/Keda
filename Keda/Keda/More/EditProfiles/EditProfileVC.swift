@@ -13,15 +13,19 @@ class EditProfileVC: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
     private let firstNameView = UIView()
     private let lastNameView = UIView()
+    private let typeView = UIView()
     private let emailAddressView = UIView()
     private let phoneNumberView = UIView()
     
     private let firstNameLbl = UILabel()
     private let lastNameLbl = UILabel()
+    private let typeLbl = UILabel()
     private let emailAddressLbl = UILabel()
     private let phoneNumberLbl = UILabel()
+    
     private let firstNameTF = UITextField()
     private let lastNameTF = UITextField()
+    private let typeTF = UITextField()
     private let emailAddressTF = UITextField()
     private let phoneNumberTF = UITextField()
     
@@ -38,6 +42,7 @@ class EditProfileVC: UIViewController {
     var userUID: String = ""
     var firstName = ""
     var lastName = ""
+    var type = ""
     var email = ""
     var phoneNumber = ""
     
@@ -110,6 +115,7 @@ extension EditProfileVC {
         print("===============//===============")
         print("FirstName: \(self.firstName)")
         print("LastName: \(self.lastName)")
+        print("Type: \(self.type)")
         print("Email: \(self.email)")
         print("PhoneNumber: \(self.phoneNumber)")
         
@@ -121,10 +127,13 @@ extension EditProfileVC {
             
             if !self.firstName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
                 !self.lastName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+                !self.type.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+
                 !self.phoneNumber.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 
                 let toDictionary = [
                     "fullName": self.firstName + " " + self.lastName,
+                    "type": self.type,
                     "phoneNumber": self.phoneNumber
                 ]
                 
@@ -177,7 +186,7 @@ extension EditProfileVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -187,6 +196,12 @@ extension EditProfileVC: UITableViewDataSource {
         if indexPath.section == 0 {
             switch indexPath.row {
             case 0:
+                let txt = NSLocalizedString("Type", comment: "EditProfileVC.swift: Type")
+                setupContainerView(typeView, cell: cell)
+                setupTitle(typeLbl, text: txt, view: typeView)
+                setupTF(typeTF, view: typeView, placeholder: "Type", txt: type)
+                typeTF.addTarget(self, action: #selector(typeChanged), for: .editingChanged)
+            case 1:
                 let txt = NSLocalizedString("First Name", comment: "EditProfileVC.swift: First Name")
                 setupContainerView(firstNameView, cell: cell)
                 setupTitle(firstNameLbl, text: txt, view: firstNameView)
@@ -196,9 +211,10 @@ extension EditProfileVC: UITableViewDataSource {
                 let txt = NSLocalizedString("Last Name", comment: "EditProfileVC.swift: Last Name")
                 setupContainerView(lastNameView, cell: cell)
                 setupTitle(lastNameLbl, text: txt, view: lastNameView)
-                setupTF(lastNameTF, view: lastNameView, placeholder: "Nguyễn", txt: lastName)
+                setupTF(lastNameTF, view: lastNameView, placeholder: "Last Name", txt: lastName)
                 lastNameTF.addTarget(self, action: #selector(lastNameChanged), for: .editingChanged)
             }
+        
             
         } else {
             switch indexPath.row {
@@ -206,7 +222,7 @@ extension EditProfileVC: UITableViewDataSource {
                 let txt = NSLocalizedString("E-mail Address", comment: "EditProfileVC.swift: E-mail Address")
                 setupContainerView(emailAddressView, cell: cell)
                 setupTitle(emailAddressLbl, text: txt, view: emailAddressView)
-                setupTF(emailAddressTF, view: emailAddressView, placeholder: "jack@gmail.com", keyboardType: .emailAddress, txt: "")
+                setupTF(emailAddressTF, view: emailAddressView, placeholder: "keda@kedaapp.com", keyboardType: .emailAddress, txt: "")
                 emailAddressTF.isUserInteractionEnabled = false
                 emailAddressTF.textColor = .gray
                 
@@ -257,11 +273,11 @@ extension EditProfileVC: UITableViewDataSource {
                 ])
                 
             default:
-//                let txt = "Số Điện Thoại"
+
                 let txt = NSLocalizedString("Phone Number", comment: "EditProfileVC.swift: Phone Number")
                 setupContainerView(phoneNumberView, cell: cell)
                 setupTitle(phoneNumberLbl, text: txt, view: phoneNumberView)
-                setupTF(phoneNumberTF, view: phoneNumberView, placeholder: "84987123456", keyboardType: .numberPad, txt: phoneNumber)
+                setupTF(phoneNumberTF, view: phoneNumberView, placeholder: "4165554444", keyboardType: .numberPad, txt: phoneNumber)
             }
         }
         
@@ -283,8 +299,8 @@ extension EditProfileVC: UITableViewDataSource {
         touchAnim(sender) {
             Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
                 guard error == nil else {
-                    let titleTxt = NSLocalizedString("Whoops!!!", comment: "EditProfileVC.swift: Whoops!!!")
-                    let mesTxt = NSLocalizedString("Email address is not invalid", comment: "EditProfileVC.swift: Email address is not invalid")
+                    let titleTxt = NSLocalizedString("Error", comment: "EditProfileVC.swift: Error")
+                    let mesTxt = NSLocalizedString("Email address is invalid", comment: "EditProfileVC.swift: Email address is invalid")
                     
                     handleErrorAlert(titleTxt, mes: mesTxt, act: "OK", vc: self)
                     return
@@ -352,6 +368,11 @@ extension EditProfileVC: UITableViewDataSource {
             tf.text = text.capitalized
         }
     }
+    @objc func typeChanged(tf: UITextField) {
+        if let text = tf.text {
+            tf.text = text.lowercased()
+        }
+    }
 }
 
 //MARK: - UITableViewDelegate
@@ -362,7 +383,8 @@ extension EditProfileVC: UITableViewDelegate {
         if indexPath.section == 0 {
             switch indexPath.row {
             case 0: firstNameTF.becomeFirstResponder()
-            default: lastNameTF.becomeFirstResponder()
+            case 1: lastNameTF.becomeFirstResponder()
+            default: typeTF.becomeFirstResponder()
             }
             
         } else if indexPath.section == 1 {
@@ -464,12 +486,26 @@ extension EditProfileVC: UITextFieldDelegate {
                     text.containsOnlyLetters, text.count < 20 {
                     borderView(lastNameView)
                     lastName = text
-                    emailAddressTF.becomeFirstResponder()
+                    typeTF.becomeFirstResponder()
                     
                 } else {
                     setupAnimBorderView(lastNameView)
                     lastName = ""
                     lastNameTF.becomeFirstResponder()
+                }
+            }
+        } else if textField == typeTF {
+            if let text = typeTF.text {
+                if !text.trimmingCharacters(in: .whitespaces).isEmpty,
+                    text.containsOnlyLetters, text.count < 20 {
+                    borderView(typeView)
+                    type = text
+                    phoneNumberTF.becomeFirstResponder()
+                    
+                } else {
+                    setupAnimBorderView(typeView)
+                    type = ""
+                    typeTF.becomeFirstResponder()
                 }
             }
             
@@ -516,6 +552,18 @@ extension EditProfileVC: UITextFieldDelegate {
                 } else {
                     setupAnimBorderView(lastNameView)
                     lastName = ""
+                }
+            }
+        } else if textField == typeTF {
+            if let text = typeTF.text {
+                if !text.trimmingCharacters(in: .whitespaces).isEmpty,
+                    text.containsOnlyLetters, text.count < 20 {
+                    borderView(typeView)
+                    type = text
+                    
+                } else {
+                    setupAnimBorderView(typeView)
+                    type = ""
                 }
             }
             
@@ -568,15 +616,21 @@ extension EditProfileVC {
         let txtC: UIColor = isDarkMode ? .white : .black
         firstNameLbl.textColor = txtC
         lastNameLbl.textColor = txtC
+        typeLbl.textColor = txtC
         emailAddressLbl.textColor = txtC
         phoneNumberLbl.textColor = txtC
         
         let tfC: UIColor = isDarkMode ? darkColor : .white
         firstNameTF.textColor = txtC
         firstNameTF.backgroundColor = tfC
+        typeTF.backgroundColor = tfC
+
         
         lastNameTF.textColor = txtC
         lastNameTF.backgroundColor = tfC
+        
+        typeTF.textColor = txtC
+        typeTF.backgroundColor = tfC
         
         emailAddressTF.textColor = isDarkMode ? .lightGray : .gray
         emailAddressTF.backgroundColor = tfC
@@ -590,6 +644,9 @@ extension EditProfileVC {
         
         lastNameView.backgroundColor = vC
         lastNameView.layer.borderColor = vC.cgColor
+        
+        typeView.backgroundColor = vC
+        typeView.layer.borderColor = vC.cgColor
         
         emailAddressView.backgroundColor = vC
         emailAddressView.layer.borderColor = vC.cgColor

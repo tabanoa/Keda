@@ -39,7 +39,7 @@ class CheckoutVC: UIViewController {
     private var braintreeClient: BTAPIClient? //PayPal
     private var payPalDriver: BTPayPalDriver? //PayPal
     
-    let whoopsTxt = NSLocalizedString("Whoops!!!", comment: "CheckoutVC.swift: Whoops!!!")
+    let errorTxt = NSLocalizedString("Error", comment: "CheckoutVC.swift: Error")
     let continueTxt = NSLocalizedString("Continue", comment: "CheckoutVC.swift: Continue")
     let methodTxt = NSLocalizedString("Select Payment Method", comment: "CheckoutVC.swift: Select Payment Method")
     
@@ -245,7 +245,7 @@ extension CheckoutVC: CheckoutBottomViewDelegate {
                     guard Stripe.deviceSupportsApplePay() else {
                         let mesTxt = NSLocalizedString("Device does not support Apple Pay", comment: "CheckoutVC.swift: Device does not support Apple Pay")
                         
-                        handleErrorAlert(whoopsTxt, mes: mesTxt, act: "OK", vc: self)
+                        handleErrorAlert(errorTxt, mes: mesTxt, act: "OK", vc: self)
                         return
                     }
                     
@@ -405,7 +405,7 @@ extension CheckoutVC {
             
         } else {
             let mes = NSLocalizedString("There is a problem with your Apple Pay configuration", comment: "CheckoutVC.swift: There is a problem with your Apple Pay configuration")
-            handleErrorAlert(whoopsTxt, mes: mes, act: "OK", vc: self)
+            handleErrorAlert(errorTxt, mes: mes, act: "OK", vc: self)
         }
     }
 }

@@ -110,7 +110,7 @@ extension ShoppingCart {
             
             subtotal = price
             fee = subtotal > 50.0 ? 5.0 : 0.0
-            tax = round(100*(0.1 * (subtotal+fee)))/100
+            tax = round(100*(0.10 * (subtotal+fee)))/100
             total = round(100*(subtotal + fee + tax))/100
             
             dictionary["products"] = prDict

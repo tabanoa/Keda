@@ -41,7 +41,7 @@ class SignInVC: UIViewController {
     private let passPlTxt = "●●●●●●"
     private let forgetPassTxt = NSLocalizedString("Forget Password?", comment: "SignInVC.swift: Forget Password")
     private let orTxt = NSLocalizedString("OR", comment: "SignInVC.swift: OR")
-    private let whoopsTxt = NSLocalizedString("Whoops!!!", comment: "SignInVC.swift: Whoops")
+    private let errorTxt = NSLocalizedString("Error", comment: "SignInVC.swift: Error")
     
     private var interactiveTransition: UIPercentDrivenInteractiveTransition!
     private var panGestureRecognizer: UIPanGestureRecognizer!
@@ -266,7 +266,7 @@ extension SignInVC {
                             hud.removeFromSuperview()
                             
                             let mesTxt = NSLocalizedString("Email address does not exist", comment: "SignInVC.swift: Email address does not exist")
-                            handleErrorAlert(self.whoopsTxt, mes: mesTxt, act: "OK", vc: self)
+                            handleErrorAlert(self.errorTxt, mes: mesTxt, act: "OK", vc: self)
                             return
                         }
                         
@@ -326,7 +326,7 @@ extension SignInVC {
                     hud.removeFromSuperview()
                     
                     let mes = NSLocalizedString("Email or password is incorrect", comment: "SignInVC.swift: Email or password is incorrect")
-                    handleErrorAlert(self.whoopsTxt, mes: mes, act: "OK", vc: self)
+                    handleErrorAlert(self.errorTxt, mes: mes, act: "OK", vc: self)
                     
                 } else {
                     UIView.animate(withDuration: 0.5, animations: {

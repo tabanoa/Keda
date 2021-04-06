@@ -19,11 +19,11 @@ public let fontNamedBold = "HelveticaNeue-Bold"
 public let fontLinhLight = "LinhAmorSans-Light"
 public let fontLinhBold = "LinhAmorSans-Bold"
 
-public let defaultColor = UIColor(hex: 0xeeae33)
+public let defaultColor = UIColor(hex: 0x3524cc)
 public let groupColor = UIColor(hex: 0xEFEFF3)
 public let darkColor = UIColor(hex: 0x1C1C1E)
-public let lightSeparatorColor = UIColor(hex: 0xEFEFF4)
-public let darkSeparatorColor = UIColor(hex: 0x373737)
+public let lightSeparatorColor = UIColor(hex: 0xFFFFFF)
+public let darkSeparatorColor = UIColor(hex: 0xFFFFFF)
 
 let appDl = UIApplication.shared.delegate as! AppDelegate
 var numbers: [Int] = Array(0...50)
@@ -51,7 +51,7 @@ public var categories: [String] = [
     NSLocalizedString("Shorts", comment: "Types.swift: shorts"),                  //7
     NSLocalizedString("Pants", comment: "Types.swift: pants"),                //8
     NSLocalizedString("Slides", comment: "Types.swift: slides"),            //9
-    NSLocalizedString("Lounge", comment: "Types.swift: Sl/Users/laptop/Desktop/Fashi-Document/Keda/Keda/MyUtils/Types.swifteepwear"),      //10
+    NSLocalizedString("Lounge", comment: "Types.swift: lounge"),      //10
     NSLocalizedString("Collectables", comment: "Types.swift: collectables")         //11
 ]
 

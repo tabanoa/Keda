@@ -55,7 +55,7 @@ extension CartSubtotalTVCell {
         let feeNameTxt = NSLocalizedString("SHIPPING FEE", comment: "CartSubtotalTVCell.swift: SHIPPING FEE")
         shippingFeeTitleLbl.configureNameForCell(false, txtColor: .darkGray, fontSize: 15.0, isTxt: feeNameTxt, fontN: fontNamedBold)
         
-        let taxNameTxt = NSLocalizedString("TAX", comment: "CartSubtotalTVCell.swift: TAX")
+        let taxNameTxt = NSLocalizedString("INSURANCE FEE", comment: "CartSubtotalTVCell.swift: INSURANCE FEE")
         taxTitleLbl.configureNameForCell(false, txtColor: .darkGray, fontSize: 15.0, isTxt: taxNameTxt, fontN: fontNamedBold)
         
         //TODO: - NumberLbl

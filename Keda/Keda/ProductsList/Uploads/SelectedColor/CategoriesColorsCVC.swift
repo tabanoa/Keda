@@ -151,7 +151,7 @@ extension CategoriesColorsCVC {
             case categories[1] == self.category:
                 categoriesSizesCVC.sizes = ["NOSIZE"]
             case categories[2] == self.category:
-                categoriesSizesCVC.sizes = ["EU 35.5", "EU 36", "EU 36.5", "EU 37.5"]
+                categoriesSizesCVC.sizes = ["US 8", "US 9", "US 10", "US 11"]
             case categories[3] == self.category:
                 categoriesSizesCVC.sizes = ["38MM", "40MM", "44MM"]
             case categories[4] == self.category:
@@ -172,7 +172,7 @@ L:9.8" * W:5.7" * H:9.8"
             case categories[10] == self.category:
                 categoriesSizesCVC.sizes = size
             case categories[11] == self.category:
-                categoriesSizesCVC.sizes = size
+                categoriesSizesCVC.sizes = ["NOSIZE"]
             default: break
             }
             

@@ -159,6 +159,17 @@ extension User {
         }
     }
     
+    class func fetchLister(completion: @escaping (User) -> Void) {
+        let ref = DatabaseRef.user(uid: currentUID).ref()
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            if let dict = snapshot.value as? [String: Any] {
+                let model = UserModel(dictionary: dict)
+                let user = User(userModel: model)
+                completion(user)
+            }
+        }
+    }
+    
     class func fetchAllUsers(completion: @escaping ([User]) -> Void) {
         var users: [User] = []
         let ref = Database.database().reference().child("User")

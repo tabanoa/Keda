@@ -7,7 +7,7 @@
 import UIKit
 import Alamofire
 
-public let clientID = "1708c9d9283726e" //Imgur
+public let clientID = "24c366149087823" //Imgur
 
 class Imgur {
     

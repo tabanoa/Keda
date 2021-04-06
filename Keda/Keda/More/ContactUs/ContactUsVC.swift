@@ -150,7 +150,7 @@ extension ContactUsVC: UITableViewDataSource {
     func setupAddress(_ title: UILabel, sub: UILabel, cell: UITableViewCell) {
         let txt = NSLocalizedString("Our Address", comment: "ContactUsVC.swift: Our Address")
         title.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: txt, fontN: fontNamed)
-        sub.configureNameForCell(false, line: 2, txtColor: .gray, fontSize: 14.0, isTxt: "29A Street, An Khe town, Gia Lai province, 600000", fontN: fontNamed)
+        sub.configureNameForCell(false, line: 2, txtColor: .gray, fontSize: 14.0, isTxt: "123 Front Street W, Toronto, Ontario", fontN: fontNamed)
         
         let views = [title, sub]
         let sv = createdStackView(views, spacing: 5.0, axis: .vertical, distribution: .fill, alignment: .leading)
@@ -210,7 +210,7 @@ extension ContactUsVC: UITableViewDelegate {
             
         } else {
             touchAnim(cell) {
-                guard let url = URL(string: "tel://\(0944784567)") else { return }
+                guard let url = URL(string: "tel://\(4165555555)") else { return }
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
         }
@@ -244,7 +244,7 @@ extension ContactUsVC: UITableViewDelegate {
             
         } else if section == 1 {
             let notificationLbl = UILabel()
-            let txt = NSLocalizedString("Our business hours are Mon - Fri, 8am - 5pm.", comment: "ContactUsVC.swift: Our business hours are Mon - Fri, 8am - 5pm.")
+            let txt = NSLocalizedString("Our business hours are Mon - Fri, 9am - 5pm.", comment: "ContactUsVC.swift: Our business hours are Mon - Fri, 9am - 5pm.")
             notificationLbl.configureNameForCell(false, txtColor: .lightGray, fontSize: 12.0, isTxt: txt)
             notificationLbl.configureHeaderTitle(kView)
         }

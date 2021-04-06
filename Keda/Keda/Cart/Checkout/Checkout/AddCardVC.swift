@@ -112,7 +112,7 @@ extension AddCardVC {
                         self.hud.removeFromSuperview()
                         print("Failed")
                         
-                        let titleTxt = NSLocalizedString("Whoops!!!", comment: "AddCardVC.swift: Whoops!!!")
+                        let titleTxt = NSLocalizedString("Error", comment: "AddCardVC.swift: Error")
                         let cancelTxt = NSLocalizedString("Cancel", comment: "AddCardVC.swift: Cancel")
                         let tryAgainTxt = NSLocalizedString("Try Again", comment: "AddCardVC.swift: Try Again")
                         let alert = UIAlertController(title: titleTxt, message: error!.localizedDescription, preferredStyle: .alert)

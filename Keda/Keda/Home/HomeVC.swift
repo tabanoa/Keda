@@ -245,8 +245,8 @@ extension HomeVC: HomeContainerViewDelegate {
     
     func handleFacebookDidTap() {
         let urls = [
-            "fb://profile/hoang.mtv.075", //App
-            "https://www.facebook.com/hoang.mtv.075" //Web
+            "fb://profile/kedaapp", //App
+            "https://www.facebook.com/kedaapp" //Web
         ]
         
         UIApplication.tryURL(urls: urls)

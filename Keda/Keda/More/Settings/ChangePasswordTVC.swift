@@ -337,14 +337,14 @@ extension ChangePasswordTVC {
             guard !self.currentPassword.isEmpty,
                 !self.newPassword.isEmpty,
                 !self.verifyPassword.isEmpty else {
-                    let titleTxt = NSLocalizedString("Whoops!!!", comment: "ChangePasswordTVC.swift: Whoops!!!")
+                    let titleTxt = NSLocalizedString("error", comment: "ChangePasswordTVC.swift: error")
                     let mesTxt = NSLocalizedString("Missing data", comment: "ChangePasswordTVC.swift: Missing data")
                     handleErrorAlert(titleTxt, mes: mesTxt, act: "OK", vc: self)
                     return
             }
             
             guard self.newPassword.elementsEqual(self.verifyPassword) else {
-                let titleTxt = NSLocalizedString("Whoops!!!", comment: "ChangePasswordTVC.swift: Whoops!!!")
+                let titleTxt = NSLocalizedString("error", comment: "ChangePasswordTVC.swift: error")
                 let mesTxt = NSLocalizedString("New password and confirmation password are not the same", comment: "ChangePasswordTVC.swift: New password and confirmation password are not the same")
                 handleErrorAlert(titleTxt, mes: mesTxt, act: "OK", vc: self)
                 return

@@ -91,7 +91,7 @@ extension ChangePasswordVC: ChangePasswordTVCDelegate {
             guard error == nil else {
                 hud.removeFromSuperview()
                 
-                let titleTxt = NSLocalizedString("Whoops!!!", comment: "ChangePasswordVC.swift: Whoops!!!")
+                let titleTxt = NSLocalizedString("error", comment: "ChangePasswordVC.swift: error")
                 let mesTxt = NSLocalizedString("Current password is incorrect", comment: "ChangePasswordVC.swift: Current password is incorrect")
                 handleErrorAlert(titleTxt, mes: mesTxt, act: "OK", vc: self)
                 return

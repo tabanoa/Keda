@@ -25,6 +25,7 @@ class TabBarController: UITabBarController {
     var isSelect = false
     
     private var isAdmin = false
+    private var isLister = false
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -42,7 +43,13 @@ class TabBarController: UITabBarController {
             self.updateUI(self.isAdmin)
             self.setupMiddleBtn()
         }
-    
+
+//        User.fetchLister { (user) in
+//            self.isLister = user.type == "lister"
+//            self.updateUI(self.isLister)
+//            self.setupMiddleBtn()
+//        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

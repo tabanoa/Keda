@@ -2,7 +2,7 @@
 //  STPAPIClient+ApplePay.m
 //  Stripe
 //
-//  Created by Jack Flintermann on 12/19/14.
+//  Created by Keda Team on 04/19/21.
 //
 
 #import "STPAPIClient+ApplePay.h"

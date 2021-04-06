@@ -118,7 +118,9 @@ class AddressVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fetchStatesData()
+        fetchCitiesData()
     }
+    
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -358,10 +360,10 @@ extension AddressVC: UITableViewDataSource {
                 setupImgView(countryIcon, view: countryView)
                 setupBtn(countryBtn, selector: #selector(countryDidTap), imgV: countryIcon, view: countryView)
                 
-                var rTxt = NSLocalizedString("State", comment: "AddressVC.swift: State")
+                var rTxt = NSLocalizedString("Province", comment: "AddressVC.swift: Province")
                 let isState = rTxt == "Provinces" ? true : false
                 if isCanada {
-                    rTxt = isState ? "Provinces" : "State" //province 2
+                    rTxt = isState ? "Provinces" : "Province" //province 2
                     stateView = UIView()
                     setupRightView(stateView!, cell: cell)
                     setupRightLbl(stateLbl, rightTxt: rTxt, rightV: stateView!, cell: cell)
@@ -370,7 +372,7 @@ extension AddressVC: UITableViewDataSource {
                     setupBtn(stateBtn, selector: #selector(stateDidTap), imgV: stateIcon, view: stateView!)
                     
                 } else {
-                    rTxt = isState ? "Provinces" : "State"
+                    rTxt = isState ? "Provinces" : "Province"
                     stateTF = CustomizedTF()
                     setupRightTF(stateTF!, txt: stateTxt, cell: cell)
                     setupRightLbl(stateLbl, rightTxt: rTxt, rightV: stateTF!, cell: cell)
@@ -378,7 +380,7 @@ extension AddressVC: UITableViewDataSource {
                 }
             case 4:
                 let lTxt = NSLocalizedString("City", comment: "AddressVC.swift: City")
-                let rTxt = "Zipcode"
+                let rTxt = "Postal Code"
                 
                 if isCanada {
                     cityView = UIView()
@@ -683,9 +685,9 @@ extension AddressVC: UITableViewDataSource {
         print("Add1: \(addressLine1Txt)")
         print("Add2: \(addressLine2Txt)")
         print("Country: \(countryTxt)")
-        print("State: \(stateTxt)")
+        print("Province: \(stateTxt)")
         print("City: \(cityTxt)")
-        print("Zipcode: \(zipcodeTxt)")
+        print("Postal Code: \(zipcodeTxt)")
         print("Phone: \(phoneNumberTxt)")
         print("\n")
         
