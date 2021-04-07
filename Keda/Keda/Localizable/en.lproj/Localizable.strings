@@ -1,0 +1,1046 @@
+/* 
+  Localizable.strings
+ //  Keda
+ //
+ //  Created by Matthew Mukherjee on 03/03/2021.
+*/
+
+/************************ ENGLISH ************************/
+
+//MARK: - AppDelegate.swift
+/*******************************************************/
+
+/* AppDelegate.swift: English */
+"English" = "English";
+
+//MARK: - NewUser.swift
+/*******************************************************/
+
+/* NewUser.swift: Screen1 T */
+"WELCOME TO FASHI" = "WELCOME TO FASHI";
+
+/* NewUser.swift: Screen2 T */
+"QUICK SEARCH" = "QUICK SEARCH";
+
+/* NewUser.swift: Screen2 C */
+"Quickly find the products you like the most." = "Quickly find the products you like the most.";
+
+/* NewUser.swift: Screen3 T */
+"SHOPPING BAG" = "SHOPPING BAG";
+
+/* NewUser.swift: Screen3 C */
+"Add products to your shopping cart, and check them out later." = "Add products to your shopping cart, and check them out later.";
+
+/* NewUser.swift: Screen4 T */
+"WISHLIST" = "WISHLIST";
+
+/* NewUser.swift: Screen4 C */
+"Build a wishlist with your favorite products to buy them later." = "Build a wishlist with your favorite products to buy them later.";
+
+/* NewUser.swift: Screen5 T */
+"ORDER TRACKING" = "ORDER TRACKING";
+
+/* NewUser.swift: Screen5 C */
+"Monitor your orders and get updates when something changes." = "Monitor your orders and get updates when something changes.";
+
+/* NewUser.swift: Screen6 T */
+"NOTIFICATIONS" = "NOTIFICATIONS";
+
+/* NewUser.swift: Screen6 C */
+"Get notifications for new products, promotions and discounts." = "Get notifications for new products, promotions and discounts.";
+
+/* NewUser.swift: Screen7 T */
+"STRIPE PAYMENTS" = "STRIPE PAYMENTS";
+
+/* NewUser.swift: Screen7 C */
+"We support all payment options." = "We support all payment options.";
+
+/* NewUser.swift: Screen8 T */
+"APPLE PAY" = "APPLE PAY";
+
+/* NewUser.swift: Screen8 C */
+"Pay with a single click with Apple Pay." = "Pay with a single click with Apple Pay.";
+
+//MARK: - NewUserOnboardingVC.swift
+/*******************************************************/
+
+/* NewUserOnboardingVC.swift: NEXT */
+"NEXT" = "NEXT";
+
+/* NewUserOnboardingVC.swift: Skip */
+"Skip" = "Skip";
+
+/* NewUserOnboardingVC.swift: FINISH */
+"FINISH" = "FINISH";
+
+//MARK: - WelcomeVC.swift
+/*******************************************************/
+
+/* WelcomeVC.swift: Ignore */
+"Ignore" = "Ignore";
+
+/* SignInVC.swift: LOG IN
+   WelcomeVC.swift: LOG IN */
+"LOG IN" = "LOG IN";
+
+/* WelcomeVC.swift: Title */
+"Shop and get updates on new products, promotions and sales with Fashi app." = "Shop and get updates on new products, promotions and sales with Fashi app.";
+
+/* SignUpTVC.swift: SIGN UP
+   WelcomeVC.swift: SIGN UP */
+"SIGN UP" = "SIGN UP";
+
+/* WelcomeVC.swift: Welcome To Fashi */
+"Welcome To Fashi" = "Welcome To Fashi";
+
+//MARK: - SignInVC.swift
+/*******************************************************/
+
+/* SignInVC.swift: Cancel
+ ImagePickerHelper.swift: Cancel
+ Types.swift: Cancel
+ EditProfileVC.swift: Cancel
+ ChangePasswordTVC.swift: Cancel
+ ProductsListSearchVC.swift: Cancel
+ CategoriesSizesCVC.swift: Cancel
+ CategoriesColorSizeTVC.swift: Cancel
+ AddCardVC.swift: Cancel */
+"Cancel" = "Cancel";
+
+/* SignInVC.swift: Check your email address */
+"Check your email address" = "Check your email address";
+
+/* SignInVC.swift: Email address does not exist */
+"Email address does not exist" = "Email address does not exist";
+
+/* SignInVC.swift: Email or password is incorrect */
+"Email or password is incorrect" = "Email or password is incorrect";
+
+/* SignInVC.swift: Enter email address */
+"Enter email address" = "Enter email address";
+
+/* SignInVC.swift: FACEBOOK LOGIN */
+"FACEBOOK LOGIN" = "FACEBOOK LOGIN";
+
+/* SignInVC.swift: Forget Password */
+"Forget Password?" = "Forget Password?";
+
+/* SignInVC.swift: OR */
+"OR" = "OR";
+
+/* SignInVC.swift: Reset */
+"Reset" = "Reset";
+
+/* SignInVC.swift: Reset Your Password */
+"Reset Your Password" = "Reset Your Password";
+
+/* SignInVC.swift: Save password */
+"Save password" = "Save password";
+
+/* SignInVC.swift: Success
+ ProductVC.swift: Success
+ OrderHistoryVC.swift: Orders
+ ProductsListVC.swift: Success
+ ReceiptVC.swift: Success
+ ShippingToVC.swift: Success */
+"Success" = "Success";
+
+/* SignInVC.swift: Whoops
+ EditProfileVC.swift: Whoops!!!
+ ChangePasswordTVC.swift: Whoops!!!
+ ChangePasswordVC.swift: Whoops!!!
+ CheckoutVC.swift: Whoops!!!
+ AddCardVC.swift: Whoops!!! */
+"Whoops!!!" = "Whoops!!!";
+
+/* SignInVC.swift: LOGIN TO YOUR ACCOUNT */
+"LOGIN TO YOUR ACCOUNT" = "LOGIN TO YOUR ACCOUNT";
+
+//MARK: - SignUpTVC.swift
+/*******************************************************/
+
+/* SignUpVC.swift: Terms of Use */
+"Terms of Use." = "Terms of Use.";
+
+/* "SignUpVC.swift: LeftTxt */
+"By creating an account you agree with our " = "By creating an account you agree with our ";
+
+/* SignUpVC.swift: CREATE NEW ACCOUNT */
+"CREATE NEW ACCOUNT" = "CREATE NEW ACCOUNT";
+
+
+//MARK: - SignUpTVC.swift
+/*******************************************************/
+
+/* SignUpTVC.swift: At least 1 lowercased
+ ChangePasswordTVC.swift: At least 1 lowercased. */
+"At least 1 lowercased." = "At least 1 lowercased.";
+
+/* SignUpTVC.swift: At least 1 number
+ ChangePasswordTVC.swift: At least 1 number. */
+"At least 1 number." = "At least 1 number.";
+
+/* SignUpTVC.swift: At least 1 special character
+ ChangePasswordTVC.swift: At least 1 special character. */
+"At least 1 special character." = "At least 1 special character.";
+
+/* SignUpTVC.swift: At least 1 uppercase
+ ChangePasswordTVC.swift: At least 1 uppercase. */
+"At least 1 uppercase." = "At least 1 uppercase.";
+
+/* SignUpTVC.swift: Full Name */
+"Full Name" = "Full Name";
+
+/* SignUpTVC.swift: Minimum 8 characters
+ ChangePasswordTVC.swift: Minimum 8 characters. */
+"Minimum 8 characters." = "Minimum 8 characters.";
+
+/* SignUpTVC.swift: Phone Number
+ EditProfileVC.swift: Phone Number
+ AddressVC.swift: Phone Number */
+"Phone Number" = "Phone Number";
+
+//MARK: - InternetView.swift
+/*******************************************************/
+
+/* InternetView.swift: Internet Not Available
+ InternetAvailable.swift: Internet Not Available */
+"Internet Not Available" = "Internet Not Available";
+
+//MARK: - EditColorHeaderView.swift
+/*******************************************************/
+
+/* EditColorHeaderView.swift: Select */
+"Select" = "Select";
+
+//MARK: - Profile.swift
+/*******************************************************/
+
+/* Profile.swift: Account Details */
+"Account Details" = "Account Details";
+
+/* Profile.swift: Clear Search History */
+"Clear Search History" = "Clear Search History";
+
+/* Profile.swift: Clear Watch History */
+"Clear Watch History" = "Clear Watch History";
+
+/* Profile.swift: Contact Us */
+"Contact Us" = "Contact Us";
+
+/* Profile.swift: Members */
+"Members" = "Members";
+
+/* Profile.swift: Notifications */
+"Notifications" = "Notifications";
+
+/* Profile.swift: Order History */
+"Order History" = "Order History";
+
+/* Profile.swift: Settings
+ SettingsVC.swift: Settings */
+"Settings" = "Settings";
+
+//MARK: - User.swift
+/*******************************************************/
+
+/* User.swift Online */
+"Online" = "Online";
+
+//MARK: - UISearchBar+Ext.swift
+/*******************************************************/
+
+/* UISearchBar+Ext.swift: Search */
+"Search" = "Search";
+
+//MARK: - Types.swift
+/*******************************************************/
+
+/* Types.swift: days ago */
+" days ago" = " days ago";
+
+/* Types.swift: hours ago */
+" hours ago" = " hours ago";
+
+/* Types.swift: minutes ago */
+" minutes ago" = " minutes ago";
+
+/* Types.swift: seconds ago */
+" seconds ago" = " seconds ago";
+
+/* Types.swift: Accessories */
+"Accessories" = "Accessories";
+
+/* Types.swift: Title */
+"Are you sure want to exit?" = "Are you sure want to exit?";
+
+/* Types.swift: Bags */
+"Bags" = "Bags";
+
+/* Types.swift: Clothing */
+"Clothing" = "Clothing";
+
+/* Types.swift: Dresses */
+"Dresses" = "Dresses";
+
+/* Types.swift: Kids */
+"Kids" = "Kids";
+
+/* Types.swift: Lingerie */
+"Lingerie" = "Lingerie";
+
+/* Types.swift: Men */
+"Men" = "Men";
+
+/* Types.swift: No */
+"No" = "No";
+
+/* Types.swift: Online just now */
+"Online just now" = "Online just now";
+
+/* Types.swift: Require A Supported */
+"Require A Supported!" = "Require A Supported!";
+
+/* Types.swift: Shoes */
+"Shoes" = "Shoes";
+
+/* Types.swift: Skirts */
+"Skirts" = "Skirts";
+
+/* Types.swift: Sleepwear */
+"Sleepwear" = "Sleepwear";
+
+/* Types.swift: Swimwear */
+"Swimwear" = "Swimwear";
+
+/* Types.swift: Watches */
+"Watches" = "Watches";
+
+/* Types.swift: Yes */
+"Yes" = "Yes";
+
+//MARK: - FilterVC.swift
+/*******************************************************/
+
+/* FilterVC.swift: Color */
+"Color" = "Color";
+
+/* FilterVC.swift: Rating */
+"Rating" = "Rating";
+
+//MARK: - FilterContainerView.swift
+/*******************************************************/
+
+/* FilterContainerView.swift: Done
+ EditProfileVC.swift: Done
+ CategoriesColorSizeTVC.swift: Done */
+"Done" = "Done";
+
+/* FilterContainerView.swift: Filter */
+"Filter" = "Filter";
+
+/* FilterContainerView.swift: Clear All */
+"Clear All" = "Clear All";
+
+//MARK: - FilteredVC.swift
+/*******************************************************/
+
+/* FilteredVC.swift: Filered */
+"Filered" = "Filered";
+
+/* FilteredVC.swift: Product does not exist */
+"Product does not exist" = "Product does not exist";
+
+//MARK: - SearchContainerView.swift
+/*******************************************************/
+
+/* SearchContainerView.swift: Search Suggestions */
+"Search Suggestions" = "Search Suggestions";
+
+/* SearchContainerView.swift: Recent Searches */
+"Recent Searches" = "Recent Searches";
+
+/* SearchContainerView.swift: Recently Viewed */
+"Recently Viewed" = "Recently Viewed";
+
+/* SearchContainerView.swift: View All */
+"View All" = "View All";
+
+//MARK: - ProductVC.swift
+/*******************************************************/
+
+/* ProductVC.swift: Delivery Options */
+"Delivery Options" = "Delivery Options";
+
+/* ProductVC.swift: Description
+ CategoriesInfoTVC.swift: Description */
+"Description" = "Description";
+
+/* ProductVC.swift: Description & Delivery */
+"Description & Delivery" = "Description & Delivery";
+
+/* ProductVC.swift: Select Colos */
+"Select Colos" = "Select Colos";
+
+/* ProductVC.swift: Select Colos And Sizes */
+"Select Colos And Sizes" = "Select Colos And Sizes";
+
+/* ProductVC.swift: Select Sizes
+ CategoriesSizesCVC.swift: Select Sizes */
+"Select Sizes" = "Select Sizes";
+
+/* ProductVC.swift: Share */
+"Share" = "Share";
+
+//MARK: - ProductColorView.swift
+/*******************************************************/
+
+/* ProductColorView.swift: Colors */
+"Colors" = "Colors";
+
+//MARK: - ProductSizeView.swift
+/*******************************************************/
+
+/* ProductSizeView.swift: Sizes
+ CategoriesSizesCVC.swift: Sizes */
+"Sizes" = "Sizes";
+
+//MARK: - ProductContentView.swift
+/*******************************************************/
+
+/* ProductContentView.swift: View All */
+"View All" = "View All";
+
+//MARK: - ProductDescriptionView.swift
+/*******************************************************/
+
+/* ProductDescriptionView.swift: Show More */
+"Show More" = "Show More";
+
+//MARK: - ProductBottomView.swift
+/*******************************************************/
+
+/* ProductBottomView.swift: BUY */
+"BUY" = "BUY";
+
+/* ProductBottomView.swift: ADD TO BAG
+ DescriptionDeliveryVC.swift: ADD TO BAG*/
+"ADD TO BAG" = "ADD TO BAG";
+
+//MARK: - DescriptionDeliveryVC.swift
+/*******************************************************/
+
+/* DescriptionDeliveryVC.swift: Standard Saver
+ ReceiptVC.swift: Standard Saver */
+"Standard Saver" = "Standard Saver";
+
+//MARK: - ProductRatingVC.swift
+/*******************************************************/
+
+/* ProductRatingVC.swift: Product Ratings */
+"Product Ratings" = "Product Ratings";
+
+/* ProductRatingVC.swift: Ratings
+ ProductRatingHeaderView.swift: Ratings */
+"Ratings" = "Ratings";
+
+/* ProductRatingVC.swift: Thanks for your feedback */
+"Thanks for your feedback" = "Thanks for your feedback";
+
+//MARK: - ProductRatingBottomView.swift
+/*******************************************************/
+
+/* ProductRatingBottomView.swift: Enter comment */
+"Enter comment" = "Enter comment";
+
+//MARK: - QuantityIMGViewVC.swift
+/*******************************************************/
+
+/* QuantityIMGViewVC.swift: Photos From Client */
+"Photos From Client" = "Photos From Client";
+
+//MARK: - ImagePickerHelper.swift
+/*******************************************************/
+
+/* ImagePickerHelper.swift: Photo From Library */
+"Photo From Library" = "Photo From Library";
+
+/* ImagePickerHelper.swift: Take Photo */
+"Take Photo" = "Take Photo";
+
+//MARK: - MoreVC.swift
+/*******************************************************/
+
+/* MoreVC.swift: Clear search history? */
+"Clear search history?" = "Clear search history?";
+
+/* MoreVC.swift: Profile */
+"Profile" = "Profile";
+
+/* MoreVC.swift: Clear watch history? */
+"Clear watch history?" = "Clear watch history?";
+
+//MARK: - LogoutTVCell.swift
+/*******************************************************/
+
+/* LogoutTVCell.swift: Logout */
+"Logout" = "Logout";
+
+//MARK: - EditProfileVC.swift
+/*******************************************************/
+
+/* EditProfileVC.swift: E-mail Address */
+"E-mail Address" = "E-mail Address";
+
+/* EditProfileVC.swift: Edit Profile */
+"Edit Profile" = "Edit Profile";
+
+/* EditProfileVC.swift: Email address is not invalid */
+"Email address is not invalid" = "Email address is not invalid";
+
+/* EditProfileVC.swift: First Name
+ AddressVC.swift: First Name */
+"First Name" = "First Name";
+
+/* EditProfileVC.swift: Last Name */
+"Last Name" = "Last Name";
+
+/* EditProfileVC.swift: PRIVATE DETAILS */
+"PRIVATE DETAILS" = "PRIVATE DETAILS";
+
+/* EditProfileVC.swift: PUBLIC PROFILE */
+"PUBLIC PROFILE" = "PUBLIC PROFILE";
+
+/* EditProfileVC.swift: Verified */
+"Verified" = "Verified";
+
+/* EditProfileVC.swift: Verify */
+"Verify" = "Verify";
+
+//MARK: - MembersVC.swift
+/*******************************************************/
+
+/* MembersVC.swift: Members */
+"Members" = "Members";
+
+/* MembersVC.swift: MEMBERS */
+"MEMBERS" = "MEMBERS";
+
+/* MembersVC.swift: ORDER PLACED */
+"ORDER PLACED" = "ORDER PLACED";
+
+//MARK: - MemberDetailsVC.swift
+/*******************************************************/
+
+/* MemberDetailsVC.swift: Details */
+"Details" = "Details";
+
+/* MemberDetailsVC.swift: Full Name:  */
+"Full Name: " = "Full Name: ";
+
+/* MemberDetailsVC.swift: Phone Number:  */
+"Phone Number: " = "Phone Number: ";
+
+
+//MARK: - MemberDetailsHV.swift
+/*******************************************************/
+
+/* MemberDetailsHV.swift: Bought */
+"Bought" = "Bought";
+
+//MARK: - OrderHistoryVC.swift
+/*******************************************************/
+
+/* OrderHistoryVC.swift: Orders
+ ReceiptVC.swift: Orders */
+"Orders" = "Orders";
+
+/* OrderHistoryVC.swift: No data */
+"No data" = "No data";
+
+//MARK: - OrderHistoryTVCell.swift
+/*******************************************************/
+
+/* OrderHistoryTVCell.swift: Delivered
+ ReceiptVC.swift: Delivered */
+"Delivered" = "Delivered";
+
+/* OrderHistoryTVCell.swift: Order Placed
+ ReceiptVC.swift: Order Placed */
+"Order Placed" = "Order Placed";
+
+/* OrderHistoryTVCell.swift: Ordered On  */
+"Ordered On " = "Ordered On ";
+
+/* OrderHistoryTVCell.swift: REORDER */
+"REORDER" = "REORDER";
+
+/* OrderHistoryTVCell.swift: Total:  */
+"Total: " = "Total: ";
+
+//MARK: - SettingsVC.swift
+/*******************************************************/
+
+/* SettingsVC.swift: ACCOUNT */
+"ACCOUNT" = "ACCOUNT";
+
+/* ChangePasswordVC.swift: Change Password
+   SettingsVC.swift: Change Password */
+"Change Password" = "Change Password";
+
+/* SettingsVC.swift: Log Out */
+"Log Out" = "Log Out";
+
+/* SettingsVC.swift: New Arrivals */
+"New Arrivals" = "New Arrivals";
+
+/* SettingsVC.swift: Order Updates */
+"Order Updates" = "Order Updates";
+
+/* SettingsVC.swift: Promotions */
+"Promotions" = "Promotions";
+
+/* SettingsVC.swift: PUSH NOTIFICATIONS */
+"PUSH NOTIFICATIONS" = "PUSH NOTIFICATIONS";
+
+/* SettingsVC.swift: Sales Alerts */
+"Sales Alerts" = "Sales Alerts";
+
+/* SettingsVC.swift: SECURITY */
+"SECURITY" = "SECURITY";
+
+/* SettingsVC.swift: Support */
+"Support" = "Support";
+
+//MARK: - ChangePasswordVC.swift
+/*******************************************************/
+
+/* ChangePasswordVC.swift: Current password is incorrect */
+"Current password is incorrect" = "Current password is incorrect";
+
+//MARK: - ChangePasswordTVC.swift
+/*******************************************************/
+
+/* ChangePasswordTVC.swift: Current Password */
+"Current password" = "Current password";
+
+/* ChangePasswordTVC.swift: Missing data
+ CategoriesInfoTVC.swift: Missing data */
+"Missing data" = "Missing data";
+
+/* ChangePasswordTVC.swift: New Password */
+"New password" = "New password";
+
+/* ChangePasswordTVC.swift: New password and confirmation password are not the same */
+"New password and confirmation password are not the same" = "New password and confirmation password are not the same";
+
+/* ChangePasswordTVC.swift: Save Changes */
+"Save Changes" = "Save Changes";
+
+/* ChangePasswordTVC.swift: Verify Password */
+"Verify password" = "Verify password";
+
+//MARK: - ContactUsVC.swift
+/*******************************************************/
+
+/* ContactUsVC.swift: Call Us */
+"Call Us" = "Call Us";
+
+/* ContactUsVC.swift: Contact */
+"Contact" = "Contact";
+
+/* ContactUsVC.swift: CONTACT */
+"CONTACT" = "CONTACT";
+
+/* ContactUsVC.swift: E-Mail Us */
+"E-Mail Us" = "E-mail Us";
+
+/* ContactUsVC.swift: Our Address */
+"Our Address" = "Our Address";
+
+/* ContactUsVC.swift: Our business hours are Mon - Fri, 8am - 5pm. */
+"Our business hours are Mon - Fri, 8am - 5pm." = "Our business hours are Mon - Fri, 8am - 5pm.";
+
+//MARK: - NotificationVC.swift
+/*******************************************************/
+
+/* NotificationVC.swift: Notifications */
+"Notifications" = "Notifications";
+
+//MARK: - NotificationTVCell.swift
+/*******************************************************/
+
+/* NotificationTVCell.swift: Just now */
+"Just now" = "Just now";
+
+//MARK: - ProductsListVC.swift
+/*******************************************************/
+
+/* ProductsListVC.swift: ACTIVE */
+"ACTIVE" = "ACTIVE";
+
+/* ProductsListVC.swift: New Arrival -  */
+"New Arrival - " = "New Arrival - ";
+
+/* ProductsListTVCell.swift: NOT ACTIVE
+   ProductsListVC.swift: NOT ACTIVE */
+"NOT ACTIVE" = "NOT ACTIVE";
+
+//MARK: - ProductsListDetailVC.swift
+/*******************************************************/
+
+/* ProductsListDetailVC.swift: Delete */
+"Delete" = "Delete";
+
+/* ProductsListDetailVC.swift: Are you sure want to delete?
+ CategoriesInfoTVC.swift: Are you sure want to delete? */
+"Are you sure want to delete?" = "Are you sure want to delete?";
+
+//MARK: - CategoriesTVC.swift
+/*******************************************************/
+
+/* CategoriesTVC.swift: Categories */
+"Categories" = "Categories";
+
+//MARK: - CategoriesColorsCVC.swift
+/*******************************************************/
+
+/* CategoriesColorsCVC.swift: Next
+ CategoriesSizesCVC.swift: Next */
+"Next" = "Next";
+
+/* CategoriesColorsCVC.swift: Colors */
+"Colors" = "Colors";
+
+/* CategoriesColorsCVC.swift: Select Colos */
+"Select Colos" = "Select Colos";
+
+//MARK: - CategoriesSizesCVC.swift
+/*******************************************************/
+
+/* CategoriesSizesCVC.swift: Add Size */
+"Add Size" = "Add Size";
+
+/* CategoriesSizesCVC.swift: Save
+ CategoriesInfoTVC.swift: Save
+ CategoriesInfoTVC.swift: Save
+ TextVC.swift
+ TagVC.swift */
+"Save" = "Save";
+
+//MARK: - CategoriesInfoTVC.swift
+/*******************************************************/
+
+/* CategoriesInfoTVC.swift: ADD IMAGES */
+"ADD IMAGES" = "ADD IMAGES";
+
+/* CategoriesInfoTVC.swift: Copy */
+"Copy" = "Copy";
+
+/* CategoriesInfoTVC.swift: DESCRIPTION */
+"DESCRIPTION" = "DESCRIPTION";
+
+/* CategoriesInfoTVC.swift: IMAGE */
+"IMAGE" = "IMAGE";
+
+/* CategoriesInfoTVC.swift: Name */
+"Name" = "Name";
+
+/* CategoriesInfoTVC.swift: NAME */
+"NAME" = "NAME";
+
+/* CategoriesInfoTVC.swift: PRICE */
+"PRICE" = "PRICE";
+
+/* CategoriesInfoTVC.swift: SALEOFF */
+"SALEOFF" = "SALEOFF";
+
+/* CategoriesInfoTVC.swift: SALEOFF  */
+"SALEOFF " = "SALEOFF ";
+
+/* CategoriesInfoTVC.swift: TAG */
+"TAG" = "TAG";
+
+//MARK: - TextVC.swift
+/*******************************************************/
+
+/* TextVC.swift: Add Text */
+"Add Text" = "Add Text";
+
+//MARK: - CategoriesDelTVCell.swift
+/*******************************************************/
+
+/* CategoriesDelTVCell.swift: Add Text
+ CartItemTVCell.swift: DELETE */
+"DELETE" = "DELETE";
+
+//MARK: - CategoriesAddImageCVCell.swift
+/*******************************************************/
+
+/* CategoriesAddImageCVCell.swift: AddImage */
+"AddImage" = "AddImage";
+
+//MARK: - TagVC.swift
+/*******************************************************/
+
+/* TagVC.swift: Add tags */
+"Add tags" = "Add tags";
+
+/* TagVC.swift: Tags */
+"Tags" = "Tags";
+
+//MARK: - CategoriesPriceTVCell.swift
+/*******************************************************/
+
+/* CategoriesPriceTVCell.swift: Enter Price */
+"Enter Price" = "Enter Price";
+
+//MARK: - CategoriesSaleOffTVCell.swift
+/*******************************************************/
+
+/* CategoriesSaleOffTVCell.swift: Enter SaleOFF */
+"Enter SaleOFF" = "Enter SaleOFF";
+
+//MARK: - CartVC.swift
+/*******************************************************/
+
+/* CartVC.swift: Add New Address
+ ShippingToVC.swift: Add New Address */
+"Add New Address" = "Add New Address";
+
+/* CartVC.swift: ITEMS IN CART */
+"ITEMS IN CART" = "ITEMS IN CART";
+
+/* CartVC.swift: New address has been added
+ ShippingToVC.swift: New address has been added */
+"New address has been added" = "New address has been added";
+
+/* CartVC.swift: ORDER SUMMARY */
+"ORDER SUMMARY" = "ORDER SUMMARY";
+
+/* CartVC.swift: Remove Item */
+"Remove Item" = "Remove Item";
+
+/* CartVC.swift: Remove this item from cart? */
+"Remove this item from cart?" = "Remove this item from cart?";
+
+/* CartVC.swift: Select Quantity */
+"Select Quantity" = "Select Quantity";
+
+/* CartVC.swift: SHIPPING AND PAYMENT */
+"SHIPPING AND PAYMENT" = "SHIPPING AND PAYMENT";
+
+/* CartVC.swift: Shopping Cart */
+"Shopping Cart" = "Shopping Cart";
+
+//MARK: - CartShipToTVCell.swift
+/*******************************************************/
+
+/* CartShipToTVCell.swift: Ship to */
+"Ship to" = "Ship to";
+
+//MARK: - CartItemTVCell.swift
+/*******************************************************/
+
+/* CartItemTVCell.swift: Color: */
+"Color:" = "Color:";
+
+/* CartItemTVCell.swift: Size:
+ ItemTVCell.swift: Size: */
+"Size:" = "Size:";
+
+/* CartItemTVCell.swift: Quantity:
+ ItemTVCell.swift: Quantity: */
+"Quantity:" = "Quantity:";
+
+//MARK: - CartSubtotalTVCell.swift
+/*******************************************************/
+
+/* CartSubtotalTVCell.swift: SHIPPING FEE
+ SubtotalTVCell.swift: SHIPPING FEE */
+"SHIPPING FEE" = "SHIPPING FEE";
+
+/* CartSubtotalTVCell.swift: SUBTOTAL
+ SubtotalTVCell.swift: SUBTOTAL */
+"SUBTOTAL" = "SUBTOTAL";
+
+/* CartSubtotalTVCell.swift: TAX
+ SubtotalTVCell.swift: TAX */
+"TAX" = "TAX";
+
+//MARK: - CartTotalTVCell.swift
+/*******************************************************/
+
+/* CartTotalTVCell.swift: TOTAL
+ TotalTVCell.swift: TOTAL */
+"TOTAL" = "TOTAL";
+
+//MARK: - CartCheckoutTVCell.swift
+/*******************************************************/
+
+/* CartCheckoutTVCell.swift: CHECK OUT
+ CheckoutTopView.swift: CHECK OUT */
+"CHECK OUT" = "CHECK OUT";
+
+//MARK: - CheckoutVC.swift
+/*******************************************************/
+
+/* CheckoutVC.swift: Continue */
+"Continue" = "Continue";
+
+/* CheckoutVC.swift: Device does not support Apple Pay */
+"Device does not support Apple Pay" = "Device does not support Apple Pay";
+
+/* CheckoutBottomView.swift: Select Payment Method
+   CheckoutVC.swift: Select Payment Method */
+"Select Payment Method" = "Select Payment Method";
+
+/* CheckoutVC.swift: There is a problem with your Apple Pay configuration */
+"There is a problem with your Apple Pay configuration" = "There is a problem with your Apple Pay configuration";
+
+//MARK: - AddCardVC.swift
+/*******************************************************/
+
+/* AddCardVC.swift: Add A Card */
+"Add A Card" = "Add A Card";
+
+/* AddCardVC.swift: Try Again */
+"Try Again" = "Try Again";
+
+//MARK: - VisaTotalTVCell.swift
+/*******************************************************/
+
+/* VisaTotalTVCell.swift: Total */
+"Total" = "Total";
+
+//MARK: - PayPalCVCell.swift
+/*******************************************************/
+
+/* PayPalCVCell.swift: Pay using PayPal's worldwide secure system. */
+"Pay using PayPal's worldwide secure system." = "Pay using PayPal's worldwide secure system.";
+
+//MARK: - ReceiptVC.swift
+/*******************************************************/
+
+/* ReceiptVC.swift: Cash payment on delivery */
+"Cash payment on delivery" = "Cash payment on delivery";
+
+/* ReceiptVC.swift: Code order:  */
+"Code order: " = "Code order: ";
+
+/* ReceiptVC.swift: Date order:  */
+"Date order: " = "Date order: ";
+
+/* ReceiptVC.swift: Forms of delivery */
+"Forms of delivery" = "Forms of delivery";
+
+/* ReceiptVC.swift: Paid by  */
+"Paid by " = "Paid by ";
+
+/* ReceiptVC.swift: Payment method */
+"Payment method" = "Payment method";
+
+/* ReceiptVC.swift: Receiver's address */
+"Receiver's address" = "Receiver's address";
+
+/* ReceiptVC.swift: State:  */
+"State: " = "State: ";
+
+/* ReceiptVC.swift: Updating Orders -  */
+"Updating Orders - " = "Updating Orders - ";
+
+//MARK: - AddressVC.swift
+/*******************************************************/
+
+/* AddressVC.swift: Address Line 1 */
+"Address Line 1" = "Address Line 1";
+
+/* AddressVC.swift: Address Line 2 */
+"Address Line 2" = "Address Line 2";
+
+/* AddressVC.swift: City */
+"City" = "City";
+
+/* AddressVC.swift: Country/Region */
+"Country/Region" = "Country/Region";
+
+/* AddressVC.swift: Optional */
+"Optional" = "Optional";
+
+/* AddressVC.swift: Select City */
+"Select City" = "Select City";
+
+/* AddressVC.swift: Select Country */
+"Select Country" = "Select Country";
+
+/* AddressVC.swift: Select State */
+"Select State" = "Select State";
+
+/* AddressVC.swift: State */
+"State" = "State";
+
+//MARK: - ShippingToVC.swift
+/*******************************************************/
+
+/* ShippingToVC.swift: Address Book */
+"Address Book" = "Address Book";
+
+/* ShippingToVC.swift: ADDRESSES ON FILE */
+"ADDRESSES ON FILE" = "ADDRESSES ON FILE";
+
+/* ShippingToVC.swift: Edit Address */
+"Edit Address" = "Edit Address";
+
+/* ShippingToVC.swift: Has Updated */
+"Has Updated" = "Has Updated";
+
+/* ShippingToVC.swift: Update */
+"Update" = "Update";
+
+/* ShippingToVC.swift: ＋  Add New Address */
+"＋  Add New Address" = "＋  Add New Address";
+
+//MARK: - ShippingBottomView.swift
+/*******************************************************/
+
+/* ShippingBottomView.swift: Use This Address */
+"Use This Address" = "Use This Address";
+
+//MARK: - ShippingToTVCell.swift
+/*******************************************************/
+
+/* ShippingToTVCell.swift: Edit */
+"Edit" = "Edit";
+
+//MARK: - WishlistVC.swift
+/*******************************************************/
+
+/* WishlistVC.swift: My Wishlist */
+"My Wishlist" = "My Wishlist";
+
+/* WishlistVC.swift: Remove Item */
+"Remove Item" = "Remove Item";
+
+/* WishlistVC.swift: Remove this item from wishlist? */
+"Remove this item from wishlist?" = "Remove this item from wishlist?";
+
+//MARK: - HomeContainerView.swift
+/*******************************************************/
+
+/* HomeContainerView.swift: Show More */
+"Show More" = "Show More";
+
+/* HomeContainerView.swift: New Arrivals */
+"New Arrivals" = "New Arrivals";
+
+/* HomeContainerView.swift: Featured */
+"Featured" = "Featured";
+
+/* HomeContainerView.swift: Best Seller */
+"Best Seller" = "Best Seller";
+
+//MARK: - CategoriesDetailHV.swift
+/*******************************************************/
+
+/* CategoriesDetailHV.swift: COLLECTION 2020 */
+"COLLECTION 2020" = "COLLECTION 2020";

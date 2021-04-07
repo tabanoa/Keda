@@ -1,0 +1,326 @@
+//
+//  SellersDetailVC.swift
+//  Keda
+//
+//  Created by Matthew Mukherjee on 03/03/2021.
+
+import UIKit
+
+class SellersDetailVC: UIViewController {
+    
+    //MARK: - Properties
+    private let internetView = InternetView()
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let naContainerV = UIView()
+    private let bestSellerLayout = BestSellerLayout()
+    private let refresh = UIRefreshControl()
+    
+    private let filterBtn = UIButton()
+    private let backBtn = UIButton()
+    private let searchTF = UITextField()
+    
+    private var interactiveTransition: UIPercentDrivenInteractiveTransition!
+    private var panGestureRecognizer: UIPanGestureRecognizer!
+    private var shouldFinish = false
+    
+    private var color: UIColor = .clear
+    private var star: Int = 0
+    
+    lazy var sellers: [Product] = []
+    lazy var products: [Product] = []
+    
+    //MARK: - View Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        navigationItem.setHidesBackButton(true, animated: false)
+        
+        setupNavi()
+        setupCV()
+        
+        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+        view.addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        guard isInternetAvailable() else {
+            naContainerV.isHidden = true
+            collectionView.isHidden = true
+            internetView.setupInternetView(view, dl: self)
+            return
+        }
+        
+        //TODO - SearchTextField
+        setupSearchTF()
+        setupDarkMode()
+        
+        guard !appDl.isSellersDetailVC else { return }
+        naContainerV.isHidden = true
+        collectionView.isHidden = true
+        let hud = createdHUD()
+        
+        removeHUD(hud) {
+            self.naContainerV.isHidden = false
+            self.collectionView.isHidden = false
+            appDl.isSellersDetailVC = true
+        }
+    }
+}
+
+//MARK: - Configures
+
+extension SellersDetailVC {
+    
+    func setupNavi() {
+        naContainerV.configureContainerView(navigationItem)
+        
+        //TODO - Filter
+        filterBtn.configureFilterBtn(naContainerV, selector: #selector(filterDidTap), controller: self)
+
+        //TODO - Back
+        backBtn.configureBackBtn(naContainerV, selector: #selector(backDidTap), controller: self)
+    }
+    
+    @objc func filterDidTap() {
+        let filterVC = FilterVC()
+        filterVC.kDelegate = self
+        filterVC.allProducts = products
+        filterVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(filterVC, animated: false)
+    }
+    
+    @objc func backDidTap() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func setupCV() {
+        refresh.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        
+        collectionView.configureCVAddSub(ds: self, dl: self, view: view)
+        collectionView.refreshControl = refresh
+        collectionView.register(SellersDetailCVCell.self, forCellWithReuseIdentifier: SellersDetailCVCell.identifier)
+        
+        collectionView.collectionViewLayout = bestSellerLayout
+        bestSellerLayout.contentPadding = SpacingMode(horizontal: 2.0, vertical: 2.0)
+        bestSellerLayout.cellPadding = 2.0
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+    }
+    
+    @objc func handleRefresh(_ sender: UIRefreshControl) {
+        DispatchQueue.main.async {
+            delay(duration: 1.0) {
+                guard isInternetAvailable() else {
+                    handleBackToTabHome()
+                    return
+                }
+                
+                //Reload
+                sender.endRefreshing()
+            }
+        }
+    }
+    
+    func setupSearchTF() {
+        let contW = naContainerV.frame.width
+        let tfW = contW-60
+        searchTF.configureTF(self, naContainerV, xPos: (contW-tfW)/2.0, width: tfW, dl: self)
+    }
+    
+    @objc func handlePan(_ sender: UIPanGestureRecognizer) {
+        let percentThreshold: CGFloat = 0.3
+        let translation = sender.translation(in: view)
+        let percent = translation.x / view.bounds.width
+        let progress = CGFloat(fminf(fmax(Float(percent), 0.0), 1.0))
+        
+        switch sender.state {
+        case .began:
+            navigationController?.delegate = self
+            navigationController?.popViewController(animated: true)
+        case .changed:
+            if let interractiveTransition = interactiveTransition {
+                interractiveTransition.update(progress)
+            }
+            
+            shouldFinish = progress > percentThreshold
+        case .cancelled, .failed:
+            interactiveTransition.cancel()
+        case .ended:
+            shouldFinish ? interactiveTransition.finish() : interactiveTransition.cancel()
+        default: break
+        }
+    }
+}
+
+//MARK: - UICollectionViewDataSource
+
+extension SellersDetailVC: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return sellers.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SellersDetailCVCell.identifier, for: indexPath) as! SellersDetailCVCell
+        cell.seller = sellers[indexPath.item]
+        return cell
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+
+extension SellersDetailVC: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! SellersDetailCVCell
+        let seller = sellers[indexPath.item]
+        touchAnim(cell, frValue: 0.8) {
+            let productVC = ProductVC()
+            productVC.product = seller
+            productVC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(productVC, animated: true)
+        }
+    }
+}
+
+//MARK: - UICollectionViewDelegateFlowLayout
+
+extension SellersDetailVC: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let inset = collectionView.contentInset
+        let sizeItem = (collectionView.frame.size.width - (inset.left + inset.right + 10.0))/2.0
+        
+        return CGSize(width: sizeItem, height: sizeItem)
+    }
+}
+
+//MARK: - UITextFieldDelegate
+
+extension SellersDetailVC: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+        
+        let searchVC = SearchVC()
+        searchVC.products = sellers
+        searchVC.allProducts = products
+        searchVC.suggestions = Product.suggestions(products)
+        searchVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(searchVC, animated: false)
+    }
+}
+
+//MARK: - UINavigationControllerDelegate
+
+extension SellersDetailVC: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PopAnimatedTransitioning()
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        navigationController.delegate = nil
+        
+        if panGestureRecognizer.state == .began {
+            interactiveTransition = UIPercentDrivenInteractiveTransition()
+            interactiveTransition.completionCurve = .easeOut
+            
+        } else {
+            interactiveTransition = nil
+        }
+        
+        return interactiveTransition
+    }
+}
+
+//MARK: - FilterVCDelegate
+
+extension SellersDetailVC: FilteredVCDelegate {
+    
+    func handleDoneDidTap(_ color: String, _ rating: Int, vc: FilterVC) {
+        vc.handlePop()
+        
+        Product.filterByColorAndRating(color, rating, prs: sellers) { (prs) in
+            self.handlePushFilteredVC(prs)
+        }
+    }
+    
+    func handleDoneDidTap(_ color: String, vc: FilterVC) {
+        vc.handlePop()
+        
+        Product.filterByColor(color, prs: sellers) { (prs) in
+            self.handlePushFilteredVC(prs)
+        }
+    }
+    
+    func handleDoneDidTap(_ rating: Int, vc: FilterVC) {
+        vc.handlePop()
+        
+        Product.filterByRating(rating, prs: sellers) { (prs) in
+            self.handlePushFilteredVC(prs)
+        }
+    }
+    
+    func handlePushFilteredVC(_ prs: [Product]) {
+        let filteredVC = FilteredVC()
+        filteredVC.products = prs
+        filteredVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(filteredVC, animated: false)
+    }
+}
+
+//MARK: - InternetViewDelegate
+
+extension SellersDetailVC: InternetViewDelegate {
+    
+    func handleReload() {
+        for vc in navigationController!.viewControllers {
+            if vc.isKind(of: HomeVC.self) {
+                if let vc = vc as? HomeVC {
+                    if vc.isHomeVC {
+                        handleBackToTabHome()
+                        
+                    } else {
+                        return
+                    }
+                }
+            }
+        }
+    }
+}
+
+//MARK: - DarkMode
+
+extension SellersDetailVC {
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        setupDarkMode()
+    }
+    
+    private func setupDarkMode() {
+        if #available(iOS 12.0, *) {
+            switch traitCollection.userInterfaceStyle {
+            case .light, .unspecified: darkModeView()
+            case .dark: darkModeView(true)
+            default: break
+            }
+        } else {
+            darkModeView()
+        }
+    }
+    
+    private func darkModeView(_ isDarkMode: Bool = false) {
+        view.backgroundColor = isDarkMode ? .black : .white
+        searchTF.backgroundColor = isDarkMode ? darkColor : .white
+        internetView.setupDarkMode(isDarkMode)
+    }
+}
