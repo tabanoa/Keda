@@ -40,15 +40,11 @@ class TabBarController: UITabBarController {
         
         User.fetchCurrentUser { (user) in
             self.isAdmin = user.type == "admin"
-            self.updateUI(self.isAdmin)
+            self.isLister = user.type == "lister"
+            self.updateUI(self.isAdmin, self.isLister)
             self.setupMiddleBtn()
         }
 
-//        User.fetchLister { (user) in
-//            self.isLister = user.type == "lister"
-//            self.updateUI(self.isLister)
-//            self.setupMiddleBtn()
-//        }
 
     }
     
@@ -77,7 +73,7 @@ class TabBarController: UITabBarController {
 
 extension TabBarController {
     
-    func updateUI(_ isAdmin: Bool = false) {
+    func updateUI(_ isAdmin: Bool = false,_ isLister: Bool = false) {
         setValue(myTabBar, forKey: "tabBar")
         tabBar.backgroundColor = .clear
         
@@ -85,7 +81,7 @@ extension TabBarController {
         homeVC.tabBarItem.image = UIImage(named: "icon-home")
         homeVC.tabBarItem.selectedImage = UIImage(named: "icon-home-filled")
         
-        let wishlistNavi = UINavigationController(rootViewController: wishlistVC)
+        let wishlistNavi = UINavigationController(rootViewController: isLister ? productsListVC : wishlistVC)
         wishlistVC.tabBarItem.image = UIImage(named: "icon-wishlist")
         wishlistVC.tabBarItem.selectedImage = UIImage(named: "icon-wishlist-filled")
         

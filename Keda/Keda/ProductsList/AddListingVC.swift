@@ -1,12 +1,13 @@
 //
-//  ProductsListVC.swift
+//  AddListingVC.swift
 //  Keda
 //
-//  Created by Matthew Mukherjee on 03/03/2021.
+//  Created by Matthew Mukherjee on 2021-04-08.
+//  Copyright © 2021 Keda Team. All rights reserved.
 
 import UIKit
 
-class ProductsListVC: UIViewController {
+class AddListingListVC: UIViewController {
     
     //MARK: - Properties
     private let internetView = InternetView()
@@ -16,14 +17,10 @@ class ProductsListVC: UIViewController {
     private let refresh = UIRefreshControl()
     private let addView = UIView()
     private let addBtn = UIButton()
-
     
     lazy var prsActive: [Product] = []
     lazy var prsNotActive: [Product] = []
     lazy var filter: [Product] = []
-    
-    private var isAdmin = false
- //   private var isLister = false
     
     private var filterIndexPath = IndexPath()
     private lazy var newArrivalsUID: [String] = []
@@ -33,15 +30,11 @@ class ProductsListVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.setHidesBackButton(true, animated: false)
+        
         setupSearchBar()
         setupTableView()
         createAddView()
         setupDarkMode()
-        
-        User.fetchCurrentUser { (user) in
-            self.isAdmin = user.type == "admin"
-//            self.isLister = user.type == "lister"
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +55,6 @@ class ProductsListVC: UIViewController {
             hud = createdHUD()
         }
         
-        
         //TODO: - FetchData
         fetchData()
         
@@ -71,8 +63,6 @@ class ProductsListVC: UIViewController {
             self.newArrivalsUID = newArrivalsUID
         }
     }
-    
-    
     
     func fetchData() {
         prsNotActive.removeAll()
@@ -102,7 +92,7 @@ class ProductsListVC: UIViewController {
 
 //MARK: - Configures
 
-extension ProductsListVC {
+extension AddListingVC {
     
     func setupSearchBar() {
         createSearchBarController(searchController, navigationItem, resultU: self, vc: self, sbDl: self)
@@ -116,7 +106,7 @@ extension ProductsListVC {
         tableView.separatorColor = lightSeparatorColor
         tableView.separatorInset = UIEdgeInsets(top: 0.0, left: 15+58, bottom: 0.0, right: 15.0)
         tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 100.0, right: 0.0)
-        tableView.register(ProductsListTVCell.self, forCellReuseIdentifier: ProductsListTVCell.identifier)
+        tableView.register(AddListingTVCell.self, forCellReuseIdentifier: AddListingTVCell.identifier)
         tableView.rowHeight = 60.0
         
         NSLayoutConstraint.activate([
@@ -158,7 +148,6 @@ extension ProductsListVC {
             addBtn.heightAnchor.constraint(equalToConstant: addW),
             addBtn.centerXAnchor.constraint(equalTo: addView.centerXAnchor),
             addBtn.centerYAnchor.constraint(equalTo: addView.centerYAnchor),
-        
         ])
     }
     
@@ -180,7 +169,7 @@ extension ProductsListVC {
 
 //MARK: - UITableViewDataSource
 
-extension ProductsListVC: UITableViewDataSource {
+extension AddListingVC: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         guard prsNotActive.count == 0 else { return 2 }
@@ -202,7 +191,7 @@ extension ProductsListVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ProductsListTVCell.identifier, for: indexPath) as! ProductsListTVCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AddListingTVCell.identifier, for: indexPath) as! AddListingTVCell
         let section = indexPath.section
         
         if prsNotActive.count != 0 {
@@ -228,7 +217,7 @@ extension ProductsListVC: UITableViewDataSource {
 
 //MARK: - UITableViewDelegate
 
-extension ProductsListVC: UITableViewDelegate {
+extension AddListingVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -250,15 +239,12 @@ extension ProductsListVC: UITableViewDelegate {
     }
     
     private func handlePushVC(_ pr: Product, _ indexPath: IndexPath) {
-        if isAdmin {
-            let productsListDetailVC = ProductsListDetailVC()
-            productsListDetailVC.product = pr
-            productsListDetailVC.indexPath = indexPath
-            productsListDetailVC.delegate = self
-            productsListDetailVC.hidesBottomBarWhenPushed = true
-            navigationController?.pushViewController(productsListDetailVC, animated: true)
-        }
-
+        let productsListDetailVC = AddListingDetailVC()
+        productsListDetailVC.product = pr
+        productsListDetailVC.indexPath = indexPath
+        productsListDetailVC.delegate = self
+        productsListDetailVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(productsListDetailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -282,12 +268,12 @@ extension ProductsListVC: UITableViewDelegate {
             switch section {
             case 0:
                 let notActLbl = UILabel()
-                let txt = NSLocalizedString("NOT ACTIVE", comment: "ProductsListVC.swift: NOT ACTIVE")
+                let txt = NSLocalizedString("NOT ACTIVE", comment: "AddListingVC.swift: NOT ACTIVE")
                 notActLbl.configureNameForCell(false, txtColor: .lightGray, fontSize: 14.0, isTxt: txt)
                 notActLbl.configureHeaderTitle(kView)
             default:
                 let actLbl = UILabel()
-                let txt = NSLocalizedString("ACTIVE", comment: "ProductsListVC.swift: ACTIVE")
+                let txt = NSLocalizedString("ACTIVE", comment: "AddListingVC.swift: ACTIVE")
                 actLbl.configureNameForCell(false, txtColor: .lightGray, fontSize: 14.0, isTxt: txt)
                 actLbl.configureHeaderTitle(kView)
             }
@@ -307,16 +293,16 @@ extension ProductsListVC: UITableViewDelegate {
     }
 }
 
-//MARK: - ProductsListTVCellDelegate
+//MARK: - AddListingTVCellDelegate
 
-extension ProductsListVC: ProductsListTVCellDelegate {
+extension AddListingVC: AddListingTVCellDelegate {
     
-    func handleActiveDidTap(_ cell: ProductsListTVCell) {
+    func handleActiveDidTap(_ cell: AddListingTVCell) {
         guard isInternetAvailable() else { return }
         
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         let product = prsNotActive[indexPath.row]
-        let newArr = NSLocalizedString("New Arrival - ", comment: "ProductsListVC.swift: New Arrival - ")
+        let newArr = NSLocalizedString("New Arrival - ", comment: "AddListingVC.swift: New Arrival - ")
         let title = "\(newArr)\(product.type)"
         let body = "\(product.name) - \(product.price.formattedWithCurrency)"
         pushNotificationForInfo(keyName: notifKeyNewArrival, title: title, body: body)
@@ -332,7 +318,7 @@ extension ProductsListVC: ProductsListTVCellDelegate {
         }
         
         product.updateActiveForPr {
-            let txt = NSLocalizedString("Success", comment: "ProductsListVC.swift: Success")
+            let txt = NSLocalizedString("Success", comment: "AddListingVC.swift: Success")
             handleInternet(txt, imgName: "icon-checkmark") {
                 self.fetchData()
             }
@@ -340,11 +326,11 @@ extension ProductsListVC: ProductsListTVCellDelegate {
     }
 }
 
-//MARK: - ProductsListDetailVCDelegate
+//MARK: - AddListingDetailVCDelegate
 
-extension ProductsListVC: ProductsListDetailVCDelegate {
+extension AddListingVC: AddListingDetailVCDelegate {
     
-    func handleDeleteProduct(indexPath: IndexPath, vc: ProductsListDetailVC, pr: Product) {
+    func handleDeleteProduct(indexPath: IndexPath, vc: AddListingDetailVC, pr: Product) {
         vc.navigationController?.popViewController(animated: true)
         fetchData()
         
@@ -371,7 +357,7 @@ extension ProductsListVC: ProductsListDetailVCDelegate {
 }
 //MARK: - UISearchBarDelegate
 
-extension ProductsListVC: UISearchBarDelegate {
+extension AddListingVC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard isInternetAvailable() else {
@@ -391,7 +377,7 @@ extension ProductsListVC: UISearchBarDelegate {
             handlePushVC(filter.first!, filterIndexPath)
             
         } else if filter.count > 1 {
-            let prsListSearchVC = ProductsListSearchVC()
+            let prsListSearchVC = AddListingSearchVC()
             prsListSearchVC.products = filter
             prsListSearchVC.searchText = searchBar.text
             prsListSearchVC.delegate = self
@@ -401,18 +387,18 @@ extension ProductsListVC: UISearchBarDelegate {
     }
 }
 
-//MARK: - ProductsListSearchVCDelegate
+//MARK: - AddListingSearchVCDelegate
 
-extension ProductsListVC: ProductsListSearchVCDelegate {
+extension AddListingVC: AddListingSearchVCDelegate {
     
-    func handleDeletePr(_ vc: ProductsListSearchVC) {
+    func handleDeletePr(_ vc: AddListingSearchVC) {
         fetchData()
     }
 }
 
 //MARK: - UISearchResultsUpdating
 
-extension ProductsListVC: UISearchResultsUpdating {
+extension AddListingVC: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         let searchText = searchController.searchBar.text!
@@ -440,7 +426,7 @@ extension ProductsListVC: UISearchResultsUpdating {
 
 //MARK: - InternetViewDelegate
 
-extension ProductsListVC: InternetViewDelegate {
+extension AddListingVC: InternetViewDelegate {
     
     func handleReload() {
         handleBackToTabPrList()
@@ -449,7 +435,7 @@ extension ProductsListVC: InternetViewDelegate {
 
 //MARK: - DarkMode
 
-extension ProductsListVC {
+extension AddListingVC {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         setupDarkMode()
