@@ -159,7 +159,7 @@ extension HomeVC {
         }
         
         Product.fetchSellers { (products) in
-            self.sellers = products.sorted(by: { $0.buyed > $1.buyed })
+            self.sellers = products.sorted(by: { $0.purchased > $1.purchased })
             DispatchQueue.main.async {
                 self.containerView.sellersView.collectionView.reloadData()
             }

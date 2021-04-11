@@ -15,7 +15,7 @@ enum DatabaseRef {
     case rating(uid: String)
     case review(uid: String)
     case views(uid: String)
-    case buyed(uid: String)
+    case purchased(uid: String)
     case notificationFB(uid: String)
     case notificationUser(uid: String)
     
@@ -36,7 +36,7 @@ enum DatabaseRef {
         case .rating(let uid): return "Rating/\(uid)"
         case .review(let uid): return "Review/\(uid)"
         case .views(let uid): return "Views/\(uid)"
-        case .buyed(let uid): return "Buyed/\(uid)"
+        case .purchased(let uid): return "Purchased/\(uid)"
         case .notificationFB(let uid): return "NotificationFB/\(uid)"
         case .notificationUser(let uid): return "NotificationUser/\(uid)"
         }

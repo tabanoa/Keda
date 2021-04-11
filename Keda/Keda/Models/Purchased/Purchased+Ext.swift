@@ -1,5 +1,5 @@
 //
-//  Buyed+Ext.swift
+//  Purchased+Ext.swift
 //  Keda
 //
 //  Created by Matthew Mukherjee on 03/03/2021.
@@ -8,7 +8,7 @@ import Foundation
 
 //MARK: - Save
 
-extension Buyed {
+extension Purchased {
     
     class func saveBelts() {
 //        testBeltsViews1()
@@ -49,193 +49,193 @@ extension Buyed {
 
 //MARK: - Test Belts
 
-extension Buyed {
+extension Purchased {
     
     class func testBeltsViews1() {
         let prUID = "123456-ACCESSORIES-001"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testBeltsViews2() {
         let prUID = "123456-ACCESSORIES-002"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testBeltsViews3() {
         let prUID = "123456-ACCESSORIES-003"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testBeltsViews4() {
         let prUID = "123456-ACCESSORIES-004"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testBeltsViews5() {
         let prUID = "123456-ACCESSORIES-005"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testBeltsViews6() {
         let prUID = "123456-ACCESSORIES-006"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testBeltsViews7() {
         let prUID = "123456-ACCESSORIES-007"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testBeltsViews8() {
         let prUID = "123456-ACCESSORIES-008"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
 }
 
 //MARK: - Test Bags
 
-extension Buyed {
+extension Purchased {
     
     class func testBagsViews1() {
         let prUID = "123456-BAGS-001"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testBagsViews2() {
         let prUID = "123456-BAGS-002"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
 }
 
 //MARK: - Test Hoodies
 
-extension Buyed {
+extension Purchased {
     
     class func testHoodiesViews1() {
         let prUID = "123456-Hoodies-001"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testHoodiesViews2() {
         let prUID = "123456-Hoodies-002"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testHoodiesViews3() {
         let prUID = "123456-Hoodies-003"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testHoodiesViews4() {
         let prUID = "123456-Hoodies-004"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
 }
 
 //MARK: - Test Shoes
 
-extension Buyed {
+extension Purchased {
     
     class func testShoesViews1() {
         let prUID = "123456-SHOES-001"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testShoesViews2() {
         let prUID = "123456-SHOES-002"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testShoesViews3() {
         let prUID = "123456-SHOES-003"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
 }
 
 //MARK: - Test Watches
 
-extension Buyed {
+extension Purchased {
     
     class func testWatchesViews1() {
         let prUID = "123456-WATCHES-001"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testWatchesViews2() {
         let prUID = "123456-WATCHES-002"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testWatchesViews3() {
         let prUID = "123456-WATCHES-003"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
     
     class func testWatchesViews4() {
         let prUID = "123456-WATCHES-004"
         for _ in 1...Int.random(min: 30, max: 70) {
-            let model = Buyed()
-            model.saveBuyed(prUID: prUID)
+            let model = Purchased()
+            model.savePurchased(prUID: prUID)
         }
     }
 }

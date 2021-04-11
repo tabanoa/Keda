@@ -105,18 +105,18 @@ extension ReceiptVC {
         guard history != nil else { return }
         NotificationCenter.default.post(name: Notification.Name("ReloadData"), object: nil)
         
-        var isBuyed = true
+        var isPurchased = true
         var count = 0
         let hud = createdHUD()
         
         history.updateDelivered {
             let prCarts = self.history.shoppingCart.productCarts
             prCarts.forEach({
-                guard isBuyed else { return }
-                let buyed = Buyed()
-                buyed.saveBuyed(prUID: $0.prUID)
+                guard isPurchased else { return }
+                let purchased = Purchased()
+                purchased.savePurchased(prUID: $0.prUID)
                 count += 1
-                if count >= prCarts.count { isBuyed = false }
+                if count >= prCarts.count { isPurchased = false }
             })
             
             delay(duration: 1.0) {

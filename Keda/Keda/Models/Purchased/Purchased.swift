@@ -1,5 +1,5 @@
 //
-//  Buyed.swift
+//  Purchased.swift
 //  Keda
 //
 //  Created by Matthew Mukherjee on 03/03/2021.
@@ -7,7 +7,7 @@
 import Foundation
 import Firebase
 
-class Buyed {
+class Purchased {
     
     var prUID: String = ""
     var count = 0
@@ -15,7 +15,7 @@ class Buyed {
     init() {}
 }
 
-extension Buyed {
+extension Purchased {
     
     convenience init(dictionary: [String: Any]) {
         self.init()
@@ -26,19 +26,19 @@ extension Buyed {
 
 //MARK: - Save
 
-extension Buyed {
+extension Purchased {
     
-    func saveBuyed(prUID: String) {
+    func savePurchased(prUID: String) {
         let uid = Database.database().reference().childByAutoId().key!
-        let ref = DatabaseRef.buyed(uid: prUID).ref()
+        let ref = DatabaseRef.purchased(uid: prUID).ref()
         ref.runTransactionBlock { (mutableData) -> TransactionResult in
             var dict = mutableData.value as? [String: Any] ?? [:]
-            var buyedDict = dict["buyed"] as? [String: Any] ?? [:]
-            buyedDict[uid] = 1
+            var purchasedDict = dict["purchased"] as? [String: Any] ?? [:]
+            purchasedDict[uid] = 1
             
             var count = 0
             var j = 0
-            for (_, value) in buyedDict {
+            for (_, value) in purchasedDict {
                 if let i = value as? Int {
                     j += i
                 }
@@ -46,7 +46,7 @@ extension Buyed {
             
             count = j
             dict["count"] = count
-            dict["buyed"] = buyedDict
+            dict["purchased"] = purchasedDict
             dict["prUID"] = prUID
             mutableData.value = dict
             
@@ -57,10 +57,10 @@ extension Buyed {
 
 //MARK: - Fetch
 
-extension Buyed {
+extension Purchased {
     
-    class func fetchBuyed(prUID: String, completion: @escaping (Buyed?) -> Void) {
-        let ref = Database.database().reference(withPath: "Buyede")
+    class func fetchPurchased(prUID: String, completion: @escaping (Purchased?) -> Void) {
+        let ref = Database.database().reference(withPath: "Purchasede")
         ref.observe(.value) { (snapshot) in
             guard snapshot.exists() else { completion(nil); return }
 
@@ -69,8 +69,8 @@ extension Buyed {
                 guard snapshot.exists() else { completion(nil); return }
 
                 if let dict = snapshot.value as? [String: Any] {
-                    let buyed = Buyed(dictionary: dict)
-                    completion(buyed)
+                    let purchased = Purchased(dictionary: dict)
+                    completion(purchased)
                 }
             }
         }

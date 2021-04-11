@@ -32,7 +32,7 @@ struct ProModel {
     let type: String
     let tags: [String]
     var viewed: Int = 0
-    var buyed: Int = 0
+    var purchased: Int = 0
     var active = false
 }
 
@@ -77,7 +77,7 @@ class Product: Hashable {
     var imageLinks: [String] { return prSizes[sizeModelIndex].prInfoModel.imageLinks }
     var imageLink: String { return imageLinks.first! }
     var viewed: Int { return proModel.viewed }
-    var buyed: Int { return proModel.buyed }
+    var purchased: Int { return proModel.purchased }
     var active: Bool { return proModel.active }
     var images: [UIImage] { return prSizes[sizeModelIndex].prInfoModel.images }
     
@@ -457,9 +457,9 @@ extension Product {
             let pro = Product(prModel: prModel)
             guard pro.active else { return }
             
-            Buyed.fetchBuyed(prUID: pro.uid) { (buy) in
+            Purchased.fetchPurchased(prUID: pro.uid) { (buy) in
                 guard let buy = buy else {
-                    pro.proModel.buyed = 0
+                    pro.proModel.purchased = 0
                     if !products.contains(pro) {
                         products.append(pro)
                         DispatchQueue.main.async {
@@ -470,7 +470,7 @@ extension Product {
                     return
                 }
                 
-                pro.proModel.buyed = buy.count
+                pro.proModel.purchased = buy.count
                 
                 if !products.contains(pro) {
                     products.append(pro)

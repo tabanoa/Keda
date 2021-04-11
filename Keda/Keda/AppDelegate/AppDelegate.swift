@@ -93,8 +93,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //TODO: - TestViews
         saveViews()
         
-        //TODO: - TestBuyed
-        saveBuyed()
+        //TODO: - TestPurchased
+        savePurchased()
         
         //TODO: Notification
         requestAuthorizationNotif(application)
@@ -234,12 +234,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ViewsModel.saveWatches()
     }
     
-    private func saveBuyed() {
-        Buyed.saveBelts()
-        Buyed.saveBags()
-        Buyed.saveHoodies()
-        Buyed.saveShoes()
-        Buyed.saveWatches()
+    private func savePurchased() {
+        Purchased.saveBelts()
+        Purchased.saveBags()
+        Purchased.saveHoodies()
+        Purchased.saveShoes()
+        Purchased.saveWatches()
     }
     
     private func setupLogOut() {
