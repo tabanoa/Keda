@@ -19,7 +19,7 @@ public let fontNamedBold = "HelveticaNeue-Bold"
 public let fontLinhLight = "LinhAmorSans-Light"
 public let fontLinhBold = "LinhAmorSans-Bold"
 
-public let defaultColor = UIColor(hex: 0x3524cc)
+public let defaultColor = UIColor(hex: 0x043D8C)
 public let groupColor = UIColor(hex: 0xEFEFF3)
 public let darkColor = UIColor(hex: 0x1C1C1E)
 public let lightSeparatorColor = UIColor(hex: 0xFFFFFF)

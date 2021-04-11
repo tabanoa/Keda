@@ -130,20 +130,20 @@ extension HomeContainerView {
     
     func setupHeaderFooterArrivals() {
         //TODO: - Arrivals
-        let arrLblTitle = NSLocalizedString("New Arrivals", comment: "HomeContainerView.swift: New Arrivals")
+        let arrLblTitle = NSLocalizedString("New to Keda", comment: "HomeContainerView.swift: New to Keda")
         
         handleLbl(arrHeaderLbl, view: arrHeaderV, title: arrLblTitle)
         handleBtn(arrFooterBtn, view: arrFooterV, selector: #selector(arrShowMore))
         handleConstraint(arrHeaderLbl, btn: arrFooterBtn, headerV: arrHeaderV, footerV: arrFooterV)
         
         //TODO: - Featured
-        let feaLblTitle = NSLocalizedString("Featured", comment: "HomeContainerView.swift: Featured")
+        let feaLblTitle = NSLocalizedString("Featured Listings", comment: "HomeContainerView.swift: Featured Listings")
         handleLbl(feaHeaderLbl, view: feaHeaderV, title: feaLblTitle)
         handleBtn(feaFooterBtn, view: feaFooterV, selector: #selector(feaShowMore))
         handleConstraint(feaHeaderLbl, btn: feaFooterBtn, headerV: feaHeaderV, footerV: feaFooterV)
         
         //TODO: - Best Seller
-        let sellLblTitle = NSLocalizedString("Best Seller", comment: "HomeContainerView.swift: Best Seller")
+        let sellLblTitle = NSLocalizedString("Top Rentals", comment: "HomeContainerView.swift: Top Rentals")
         handleLbl(sellHeaderLbl, view: sellHeaderV, title: sellLblTitle)
         handleBtn(sellFooterBtn, view: sellFooterV, selector: #selector(sellShowMore))
         handleConstraint(sellHeaderLbl, btn: sellFooterBtn, headerV: sellHeaderV, footerV: sellFooterV)

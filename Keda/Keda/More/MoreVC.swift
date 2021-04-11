@@ -367,7 +367,7 @@ extension MoreVC: UITableViewDelegate {
     }
     //Handles the chat view controller
     private func handleChats() {
-        let ChatsVC = ChatVC()
+        let ChatsVC = ConversationsViewController()
         ChatsVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(ChatsVC, animated: true)
     }

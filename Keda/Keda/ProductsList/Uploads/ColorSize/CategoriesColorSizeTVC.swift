@@ -43,6 +43,8 @@ class CategoriesColorSizeTVC: UITableViewController {
         setupNavi()
         updateUI()
         setupDarkMode()
+        
+        print("prUID 3: \(prUID)")
     }
     
     override func viewWillAppear(_ animated: Bool) {

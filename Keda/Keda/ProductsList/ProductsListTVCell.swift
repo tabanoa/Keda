@@ -25,7 +25,7 @@ class ProductsListTVCell: UITableViewCell {
             nameLbl.text = product.name
             activeBtn.isHidden = product.active
             
-            let notActTxt = NSLocalizedString("NOT ACTIVE", comment: "ProductsListTVCell.swift: NOT ACTIVE")
+            let notActTxt = NSLocalizedString("NOT AUTHENTICATED", comment: "ProductsListTVCell.swift: NOT AUTHENTICATED")
             let txt = product.active ? "" : notActTxt
             let attributed = setupTitleAttri(txt, size: 13.0)
             activeBtn.setAttributedTitle(attributed, for: .normal)

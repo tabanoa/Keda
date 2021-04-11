@@ -60,6 +60,7 @@ class CategoriesColorsCVC: UICollectionViewController {
         let index = categories.firstIndex(of: category)!
         type = kCategories[index]
         prUID = "123\(t)-\(type.uppercased())-\(r)"
+        print("prUID 1: \(prUID)")
     }
     
     @objc func handlePan(_ sender: UIPanGestureRecognizer) {

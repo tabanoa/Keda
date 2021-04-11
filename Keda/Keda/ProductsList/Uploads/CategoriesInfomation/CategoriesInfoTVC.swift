@@ -7,6 +7,8 @@
 import UIKit
 import BSImagePicker
 import Photos
+import FirebaseDatabase
+
 
 protocol CategoriesInfoTVCDelegate: class {
     func fetchPrInfo(_ prInfo: ProductInfoModel, vc: CategoriesInfoTVC, cell: CategoriesColorSizeTVCell, tags: [String])
@@ -27,6 +29,7 @@ class CategoriesInfoTVC: UITableViewController {
     private let saveBtn = ShowMoreBtn()
     private let copyBtn = ShowMoreBtn()
     private let pasteBtn = ShowMoreBtn()
+    private let database = Database.database().reference()
     
     private let saveTxt = NSLocalizedString("Save", comment: "CategoriesInfoTVC.swift: Save")
     let delTxt = NSLocalizedString("Are you sure want to delete?", comment: "CategoriesInfoTVC.swift: Are you sure want to delete?")
@@ -50,6 +53,9 @@ class CategoriesInfoTVC: UITableViewController {
     var kSaleOff: Double = 0.0
     var kTags: [String] = []
     
+    var email = ""
+    var fullName = ""
+    var userUID = ""
     var category: String = ""
     var prUID: String = ""
     var type: String = ""
@@ -72,6 +78,12 @@ class CategoriesInfoTVC: UITableViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        
+        User.fetchCurrentUser { (user) in
+            self.fullName = user.fullName
+            self.email = user.email
+            self.userUID = user.uid
+        }
     }
     
     @objc func dismissKeyboard() {
@@ -186,6 +198,7 @@ extension CategoriesInfoTVC {
                                     description: self.kDescription,
                                     images: self.kImages,
                                     imageLinks: self.kImageLinks) {
+                            
                                         delay(duration: 2.0) {
                                             self.handlePopToVC {
                                                 hud.removeFromSuperview()
@@ -207,7 +220,10 @@ extension CategoriesInfoTVC {
                     handleInternet(txt, imgName: "icon-error")
                     return
             }
-            
+            let ref = self.database.child("Product/\(self.prUID)")
+            //COME BACK HERE
+            print("prUID 4: \(self.prUID)")
+            print("Full Name: \(self.fullName)")
             let prInfo = ProductInfoModel(name: self.kName, price: self.kPrice, saleOff: self.kSaleOff, imageLinks: [], description: self.kDescription, images: self.kImages)
             self.delegate?.fetchPrInfo(prInfo, vc: self, cell: self.cell, tags: self.kTags)
         }

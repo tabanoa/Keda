@@ -218,21 +218,21 @@ extension SettingsVC: UITableViewDataSource {
                             cell: cell,
                             selector: #selector(updatingOrdersSwitch(_:)))
             case 1:
-                let txt = NSLocalizedString("New Arrivals", comment: "SettingsVC.swift: New Arrivals")
+                let txt = NSLocalizedString("New to Keda", comment: "SettingsVC.swift: New to Keda")
                 setupLabel(newArrivalLbl, text: txt, cell: cell)
                 setupSwitch(newArrivalSw,
                             turnOn: newArrivalTurnOn,
                             cell: cell,
                             selector: #selector(newArrivalSwitch(_:)))
             case 2:
-                let txt = NSLocalizedString("Promotions", comment: "SettingsVC.swift: Promotions")
+                let txt = NSLocalizedString("Promoted Posts", comment: "SettingsVC.swift: Promoted Posts")
                 setupLabel(promotionLbl, text: txt, cell: cell)
                 setupSwitch(promotionSw,
                             turnOn: promotionTurnOn,
                             cell: cell,
                             selector: #selector(promotionSwitch(_:)))
             default:
-                let txt = NSLocalizedString("Sales Alerts", comment: "SettingsVC.swift: Sales Alerts")
+                let txt = NSLocalizedString("Keda deals", comment: "SettingsVC.swift: Keda Deals")
                 setupLabel(saleOffLbl, text: txt, cell: cell)
                 setupSwitch(saleOffSw,
                             turnOn: saleOffTurnOn,

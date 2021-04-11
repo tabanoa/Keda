@@ -277,12 +277,12 @@ extension ProductsListVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let kView = UIView().configureHeaderView(view, tableView: tableView)
-        
+
         if prsNotActive.count != 0 {
             switch section {
             case 0:
                 let notActLbl = UILabel()
-                let txt = NSLocalizedString("NOT ACTIVE", comment: "ProductsListVC.swift: NOT ACTIVE")
+                let txt = NSLocalizedString("NOT AUTHENTICATED", comment: "ProductsListVC.swift: NOT AUTHENTICATED")
                 notActLbl.configureNameForCell(false, txtColor: .lightGray, fontSize: 14.0, isTxt: txt)
                 notActLbl.configureHeaderTitle(kView)
             default:
@@ -292,6 +292,7 @@ extension ProductsListVC: UITableViewDelegate {
                 actLbl.configureHeaderTitle(kView)
             }
         }
+        
         
         if #available(iOS 12.0, *) {
             switch traitCollection.userInterfaceStyle {
@@ -313,10 +314,10 @@ extension ProductsListVC: ProductsListTVCellDelegate {
     
     func handleActiveDidTap(_ cell: ProductsListTVCell) {
         guard isInternetAvailable() else { return }
-        
+        if isAdmin {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         let product = prsNotActive[indexPath.row]
-        let newArr = NSLocalizedString("New Arrival - ", comment: "ProductsListVC.swift: New Arrival - ")
+        let newArr = NSLocalizedString("New to Keda - ", comment: "ProductsListVC.swift: New to Keda - ")
         let title = "\(newArr)\(product.type)"
         let body = "\(product.name) - \(product.price.formattedWithCurrency)"
         pushNotificationForInfo(keyName: notifKeyNewArrival, title: title, body: body)
@@ -337,7 +338,7 @@ extension ProductsListVC: ProductsListTVCellDelegate {
                 self.fetchData()
             }
         }
-    }
+        } }
 }
 
 //MARK: - ProductsListDetailVCDelegate

@@ -111,13 +111,13 @@ extension ShippingToTVCell {
         circleInside.translatesAutoresizingMaskIntoConstraints = false
         
         //TODO: - Lbl
-        nameLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "Jack ", fontN: fontNamedBold)
-        streetLine1Lbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "123 street", fontN: fontNamed)
+        nameLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "John Doe ", fontN: fontNamedBold)
+        streetLine1Lbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "123 Bay Street", fontN: fontNamed)
         streetLine2Lbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "", fontN: fontNamed)
-        cityLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "An Khe town, ", fontN: fontNamed)
-        stateLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "Gia Lai province", fontN: fontNamed)
-        countryLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "Vietnam", fontN: fontNamed)
-        zipcodeLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "600000", fontN: fontNamed)
+        cityLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "Toronto, ", fontN: fontNamed)
+        stateLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "Ontario", fontN: fontNamed)
+        countryLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "Canada", fontN: fontNamed)
+        zipcodeLbl.configureNameForCell(false, txtColor: .black, fontSize: 17.0, isTxt: "M5J3A1", fontN: fontNamed)
         
         let views1 = [cityLbl, stateLbl]
         let sv1 = createdStackView(views1, spacing: 0.0, axis: .horizontal, distribution: .fill, alignment: .leading)

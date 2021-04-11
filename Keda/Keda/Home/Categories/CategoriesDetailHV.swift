@@ -64,7 +64,7 @@ extension CategoriesDetailHV {
         titleLbl.configureNameForCell(false, txtColor: .white, fontSize: 30.0, isTxt: titleTxt, fontN: fontNamedBold)
         
         //TODO: - CollectionLbl
-        let collTxt = NSLocalizedString("COLLECTION 2020", comment: "CategoriesDetailHV.swift: COLLECTION 2020")
+        let collTxt = NSLocalizedString("Keda Collection", comment: "CategoriesDetailHV.swift: Keda Collection")
         collectionLbl.configureNameForCell(false, txtColor: defaultColor, fontSize: 12.0, isTxt: collTxt, fontN: fontNamedBold)
         
         let views = [collectionLbl, titleLbl]

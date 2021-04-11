@@ -36,6 +36,8 @@ class CategoriesSizesCVC: UICollectionViewController {
         updateUI()
         setupDarkMode()
         
+        print("prUID 2: \(prUID)")
+        
         panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
         view.addGestureRecognizer(panGestureRecognizer)
     }
